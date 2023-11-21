@@ -10,6 +10,13 @@
           <include name="NavigateCheckoutAndDummyPayment"/>
         </methods>
       </class> <!-- tests.TC09_NavigateCheckoutAndDummyPayment -->
+      <class name="tests.TC09_NavigateCheckoutAndDummyPayment$TC09_NavigateCheckoutAndDummyPaymentNegative">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="NavigateCheckoutAndDummyPayment"/>
+        </methods>
+      </class> <!-- tests.TC09_NavigateCheckoutAndDummyPayment$TC09_NavigateCheckoutAndDummyPaymentNegative -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

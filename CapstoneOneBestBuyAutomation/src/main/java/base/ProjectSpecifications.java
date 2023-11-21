@@ -16,6 +16,10 @@ public class ProjectSpecifications extends UtilClass{
 		
 		launch("Chrome");
 	    url("https://www.bestbuy.com");
+	    ////add code for headless + 
+	    
+	    launch("Chrome-Headless");
+	    
 	     
 	}
 	

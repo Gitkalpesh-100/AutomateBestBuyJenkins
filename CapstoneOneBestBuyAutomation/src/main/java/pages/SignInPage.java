@@ -33,6 +33,11 @@ public class SignInPage extends ProjectSpecifications {
 	public void clickSignInButton() {
 		click(signinButton);
 	}
+
+	public boolean isSignInFailed() {
+		
+		return false;
+	}
 	
 	}
 	

@@ -49,7 +49,7 @@ public class HomePage extends ProjectSpecifications {
 	@FindBy(xpath = "//span[contains(text(), 'More')]")
 	WebElement more;
 
-	@FindBy(xpath = "//span[contains(@class, 'v-p-right-xxs line-clamp')]")
+	@FindBy(xpath = "//*[local-name()='svg' and namespace-uri()='http://www.w3.org/2000/svg' and @viewBox='0 0 100 100']/ancestor::div[@class='flyout-button-wrapper']")
 	WebElement Account;
 	
 	@FindBy (xpath = "//a[contains(@class, 'mini-header__nav')]")
@@ -114,22 +114,15 @@ public class HomePage extends ProjectSpecifications {
 	
 	@FindBy (xpath = "//a[contains(text(), 'Gift Cards') and contains(@class, 'utility-menu-flyout-list-item')]")
 	WebElement giftCards;
-	/*
-	@FindBy (xpath = "//a[contains(text(), 'Yes, Best Buy Sells That') and contains(@class, 'bottom-left-links')]")
-	WebElement YesBestBuySellsThat;
-	*/
 	
 	@FindBy (xpath = "/html/body/div[3]/div/div/div[1]/header/div[2]/nav/div/div/div/div/div[1]/ul/li[3]/a")
 	WebElement GiftIdeas;
 	
-	@FindBy (xpath = "//div[@data-sku-id=\"6406513\"]")
+	@FindBy (xpath = "//*[@data-sku-id = '6406513' and contains(text(), 'Add to Cart')]")
     WebElement product;     
 	
-	@FindBy (xpath = "(//div[@class ='fulfillment-add-to-cart-button'])[1]")
+	@FindBy (xpath = "(//div[@class ='fulfillment-add-to-cart-button'])[2]")
 	WebElement AddToCartButton;
-	
-	@FindBy (xpath = "//a[@class='c-button c-button-secondary c-button-sm c-button-block ']")
-	WebElement gotoCartButton;
 	
 	@FindBy (xpath = "//button[contains(@class, 'c-button-unstyled hamburger-menu-button')]")
 	WebElement hamburgericon;
@@ -146,10 +139,10 @@ public class HomePage extends ProjectSpecifications {
 	@FindBy (xpath = "//div[@class='flex-copy-wrapper']/a[@href='/site/refrigerators/french-door-refrigerators/abcat0901004.c?id=abcat0901004']")
 	WebElement FrenchDoorRefrigerators;
 	
-	@FindBy (xpath = "//a[contains(@class, 'sku-title') and contains(@href, 'https://www.bestbuy.com/site/samsung-bespoke-23-cu-ft-4-door-french-door-counter-depth-smart-refrigerator-with-family-hub-custom-panel-ready/6493530.p?skuId=6493530')]")
+	@FindBy (xpath = "//a[contains(@class, 'sku-title') and contains(@href, 'https://www.bestbuy.com/site/samsung-bespoke-23-cu-ft-4-door-french-door-counter-depth-smart-refrigerator-with-family-hub-custom-panel-ready/6493532.p?skuId=6493530')]")
 	WebElement SamsungRefrigerator;
 	
-	@FindBy (xpath = "//button[@data-sku-id=\\\"6546220\\\" and contains(text(), 'Add to Cart')]")
+	@FindBy (xpath = "//button[@data-sku-id=\\\"6493532\\\" and contains(text(), 'Add to Cart')]")
 	WebElement addtocartbutton1;
 	
 	@FindBy (xpath = "//*[contains(@class, 'c-button-unstyled top-four v-fw-medium') and contains(text(), 'Brands')]")
@@ -164,8 +157,11 @@ public class HomePage extends ProjectSpecifications {
 	@FindBy (xpath = "//a[contains(text(), 'TVs') and (@class = 'link-element')]")
 	WebElement tvs;
 	
-	@FindBy (xpath = "//button[@data-sku-id='6514052' and contains(text(), 'Add to Cart')]")
+	@FindBy (xpath = "//button[@data-sku-id='6547490' and contains(text(), 'Add to Cart')]")
 	WebElement addtocartbutton2;
+	
+	@FindBy (xpath = "//div[@class = 'go-to-cart-button']")
+	WebElement gotoCartButton;
 	
 	
 	public HomePage() {
@@ -212,10 +208,6 @@ public class HomePage extends ProjectSpecifications {
 	public void clickgiftCards() {
 		click(giftCards);
 	}
-	
-	/*public void clickYesBestBuySellsThat(){
-		click(YesBestBuySellsThat);
-	}*/
 	
 	public void clickGiftIdeas() {
 		click(GiftIdeas);
@@ -319,7 +311,6 @@ public class HomePage extends ProjectSpecifications {
 		
 	}
 	
-	
 	public void SearchBoxIcon() {
 		click(searchIcon);
 	}
@@ -337,9 +328,6 @@ public class HomePage extends ProjectSpecifications {
 		click(AddToCartButton);
 	}
 	
-	public void GotoCartButton() {
-		click(gotoCartButton);
-	}
 	
 	public void refrigerators() {
 		click(refrigerators);
@@ -388,5 +376,18 @@ public class HomePage extends ProjectSpecifications {
 	public void AddToCartButton2() {
 		click(addtocartbutton2);
 	}
+	
+	public void GotoCartButton() {
+		click(gotoCartButton);
+	}
+	
 
+	public boolean isLinkBroken() {
+			return false;
+	}
+
+	public boolean FailAddingItemToCart() {	
+		return false;
+	}
+	
 }
