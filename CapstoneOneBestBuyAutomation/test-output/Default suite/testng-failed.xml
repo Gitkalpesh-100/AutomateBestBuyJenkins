@@ -3,20 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TC09_NavigateCheckoutAndDummyPayment">
+      <class name="tests.TC01_LoginFunctionality">
         <methods>
+          <include name="SignInNegativeTest"/>
+          <include name="SignInTest"/>
           <include name="launchBrowser"/>
           <include name="closeBrowser"/>
-          <include name="NavigateCheckoutAndDummyPayment"/>
         </methods>
-      </class> <!-- tests.TC09_NavigateCheckoutAndDummyPayment -->
-      <class name="tests.TC09_NavigateCheckoutAndDummyPayment$TC09_NavigateCheckoutAndDummyPaymentNegative">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="NavigateCheckoutAndDummyPayment"/>
-        </methods>
-      </class> <!-- tests.TC09_NavigateCheckoutAndDummyPayment$TC09_NavigateCheckoutAndDummyPaymentNegative -->
+      </class> <!-- tests.TC01_LoginFunctionality -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-19T23:45:54 IST" name="Default suite" finished-at="2023-11-19T23:47:59 IST" duration-ms="124382">
+  <suite started-at="2023-12-02T08:04:30 IST" name="Suite" finished-at="2023-12-02T08:06:29 IST" duration-ms="118626">
     <groups>
     </groups>
-    <test started-at="2023-11-19T23:45:54 IST" name="Default test" finished-at="2023-11-19T23:47:59 IST" duration-ms="124382">
-      <class name="tests.TC09_NavigateCheckoutAndDummyPayment$TC09_NavigateCheckoutAndDummyPaymentNegative">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC09_NavigateCheckoutAndDummyPayment$TC09_NavigateCheckoutAndDummyPaymentNegative@710f4dc7]" started-at="2023-11-19T23:47:03 IST" name="launchBrowser" finished-at="2023-11-19T23:47:05 IST" duration-ms="2845" status="PASS">
+    <test started-at="2023-12-02T08:04:30 IST" name="Test" finished-at="2023-12-02T08:06:29 IST" duration-ms="118626">
+      <class name="tests.TC01_LoginFunctionality">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC01_LoginFunctionality@79defdc]" started-at="2023-12-02T08:04:30 IST" name="launchBrowser" finished-at="2023-12-02T08:04:38 IST" duration-ms="7979" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="NavigateCheckoutAndDummyPayment()[pri:0, instance:tests.TC09_NavigateCheckoutAndDummyPayment$TC09_NavigateCheckoutAndDummyPaymentNegative@710f4dc7]" started-at="2023-11-19T23:47:05 IST" name="NavigateCheckoutAndDummyPayment" finished-at="2023-11-19T23:47:59 IST" duration-ms="53119" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="SignInTest()[pri:1, instance:tests.TC01_LoginFunctionality@79defdc]" started-at="2023-12-02T08:04:38 IST" name="SignInTest" finished-at="2023-12-02T08:04:56 IST" duration-ms="17676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignInTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC01_LoginFunctionality@79defdc]" started-at="2023-12-02T08:04:56 IST" name="closeBrowser" finished-at="2023-12-02T08:04:56 IST" duration-ms="230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC01_LoginFunctionality@79defdc]" started-at="2023-12-02T08:04:56 IST" name="launchBrowser" finished-at="2023-12-02T08:04:59 IST" duration-ms="2479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="SignInNegativeTest()[pri:2, instance:tests.TC01_LoginFunctionality@79defdc]" started-at="2023-12-02T08:04:59 IST" name="SignInNegativeTest" finished-at="2023-12-02T08:05:12 IST" duration-ms="13440" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-sku-id='6547490' and contains(text(), 'Add to Cart')]' (tried for 15 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[The Sign In should fail, but it passed. expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-sku-id='6547490' and contains(text(), 'Add to Cart')]' (tried for 15 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-at utils.UtilClass.click(UtilClass.java:69)
-at pages.HomePage.AddToCartButton2(HomePage.java:377)
-at tests.TC09_NavigateCheckoutAndDummyPayment$TC09_NavigateCheckoutAndDummyPaymentNegative.NavigateCheckoutAndDummyPayment(TC09_NavigateCheckoutAndDummyPayment.java:82)
+              <![CDATA[java.lang.AssertionError: The Sign In should fail, but it passed. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at tests.TC01_LoginFunctionality.SignInNegativeTest(TC01_LoginFunctionality.java:85)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -49,68 +60,45 @@ at org.testng.TestNG.run(TestNG.java:1082)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-sku-id='6547490' and contains(text(), 'Add to Cart')]"}
-  (Session info: chrome=119.0.6045.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dc3bd90785dc1d12be9137212c70a558, findElement {using=xpath, value=//button[@data-sku-id='6547490' and contains(text(), 'Add to Cart')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\KALPES~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51924}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51924/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dc3bd90785dc1d12be9137212c70a558
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-... 29 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NavigateCheckoutAndDummyPayment -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC09_NavigateCheckoutAndDummyPayment$TC09_NavigateCheckoutAndDummyPaymentNegative@710f4dc7]" started-at="2023-11-19T23:47:59 IST" name="closeBrowser" finished-at="2023-11-19T23:47:59 IST" duration-ms="198" status="PASS">
+        </test-method> <!-- SignInNegativeTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC01_LoginFunctionality@79defdc]" started-at="2023-12-02T08:05:12 IST" name="closeBrowser" finished-at="2023-12-02T08:05:13 IST" duration-ms="230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.TC09_NavigateCheckoutAndDummyPayment$TC09_NavigateCheckoutAndDummyPaymentNegative -->
-      <class name="tests.TC09_NavigateCheckoutAndDummyPayment">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC09_NavigateCheckoutAndDummyPayment@662ac478]" started-at="2023-11-19T23:45:54 IST" name="launchBrowser" finished-at="2023-11-19T23:45:58 IST" duration-ms="3611" status="PASS">
+      </class> <!-- tests.TC01_LoginFunctionality -->
+      <class name="tests.TC03_CheckingBrokenLinks">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC03_CheckingBrokenLinks@13d9cbf5]" started-at="2023-12-02T08:05:47 IST" name="launchBrowser" finished-at="2023-12-02T08:05:50 IST" duration-ms="3297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="NavigateCheckoutAndDummyPayment()[pri:0, instance:tests.TC09_NavigateCheckoutAndDummyPayment@662ac478]" started-at="2023-11-19T23:45:58 IST" name="NavigateCheckoutAndDummyPayment" finished-at="2023-11-19T23:47:02 IST" duration-ms="64353" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="CheckBrokenLinksTest()[pri:1, instance:tests.TC03_CheckingBrokenLinks@13d9cbf5]" started-at="2023-12-02T08:05:50 IST" name="CheckBrokenLinksTest" finished-at="2023-12-02T08:06:09 IST" duration-ms="19490" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckBrokenLinksTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC03_CheckingBrokenLinks@13d9cbf5]" started-at="2023-12-02T08:06:09 IST" name="closeBrowser" finished-at="2023-12-02T08:06:10 IST" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC03_CheckingBrokenLinks@13d9cbf5]" started-at="2023-12-02T08:06:10 IST" name="launchBrowser" finished-at="2023-12-02T08:06:12 IST" duration-ms="2354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="CheckNonBrokenLinksTest()[pri:2, instance:tests.TC03_CheckingBrokenLinks@13d9cbf5]" started-at="2023-12-02T08:06:12 IST" name="CheckNonBrokenLinksTest" finished-at="2023-12-02T08:06:29 IST" duration-ms="16702" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class = 'go-to-cart-button']' (tried for 15 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[This is not a valid link expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class = 'go-to-cart-button']' (tried for 15 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-at utils.UtilClass.click(UtilClass.java:69)
-at pages.HomePage.GotoCartButton(HomePage.java:381)
-at tests.TC09_NavigateCheckoutAndDummyPayment.NavigateCheckoutAndDummyPayment(TC09_NavigateCheckoutAndDummyPayment.java:26)
+              <![CDATA[java.lang.AssertionError: This is not a valid link expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at tests.TC03_CheckingBrokenLinks.CheckNonBrokenLinksTest(TC03_CheckingBrokenLinks.java:48)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -137,51 +125,43 @@ at org.testng.TestNG.run(TestNG.java:1082)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class = 'go-to-cart-button']"}
-  (Session info: chrome=119.0.6045.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [87d79b67f4a5c8ed1bcec9f579e39957, findElement {using=xpath, value=//div[@class = 'go-to-cart-button']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\KALPES~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51554}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51554/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 87d79b67f4a5c8ed1bcec9f579e39957
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-... 29 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NavigateCheckoutAndDummyPayment -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC09_NavigateCheckoutAndDummyPayment@662ac478]" started-at="2023-11-19T23:47:02 IST" name="closeBrowser" finished-at="2023-11-19T23:47:03 IST" duration-ms="190" status="PASS">
+        </test-method> <!-- CheckNonBrokenLinksTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC03_CheckingBrokenLinks@13d9cbf5]" started-at="2023-12-02T08:06:29 IST" name="closeBrowser" finished-at="2023-12-02T08:06:29 IST" duration-ms="140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.TC09_NavigateCheckoutAndDummyPayment -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- tests.TC03_CheckingBrokenLinks -->
+      <class name="tests.TC02_SignUpFunctionality">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC02_SignUpFunctionality@389b0789]" started-at="2023-12-02T08:05:13 IST" name="launchBrowser" finished-at="2023-12-02T08:05:15 IST" duration-ms="2591" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="SignUpTest()[pri:1, instance:tests.TC02_SignUpFunctionality@389b0789]" started-at="2023-12-02T08:05:15 IST" name="SignUpTest" finished-at="2023-12-02T08:05:31 IST" duration-ms="15261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignUpTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC02_SignUpFunctionality@389b0789]" started-at="2023-12-02T08:05:31 IST" name="closeBrowser" finished-at="2023-12-02T08:05:31 IST" duration-ms="211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC02_SignUpFunctionality@389b0789]" started-at="2023-12-02T08:05:31 IST" name="launchBrowser" finished-at="2023-12-02T08:05:33 IST" duration-ms="2470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="SignUpNegativeTest()[pri:2, instance:tests.TC02_SignUpFunctionality@389b0789]" started-at="2023-12-02T08:05:33 IST" name="SignUpNegativeTest" finished-at="2023-12-02T08:05:46 IST" duration-ms="13168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignUpNegativeTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC02_SignUpFunctionality@389b0789]" started-at="2023-12-02T08:05:46 IST" name="closeBrowser" finished-at="2023-12-02T08:05:47 IST" duration-ms="219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.TC02_SignUpFunctionality -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

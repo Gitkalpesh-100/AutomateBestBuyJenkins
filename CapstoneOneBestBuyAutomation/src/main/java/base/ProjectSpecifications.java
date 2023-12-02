@@ -13,12 +13,12 @@ public class ProjectSpecifications extends UtilClass{
 	
 	@BeforeMethod
 	public void launchBrowser() {
-		
-		launch("Chrome");
+		 launch("Chrome");
+		//launch("Chrome");
 	    url("https://www.bestbuy.com");
 	    ////add code for headless + 
 	    
-	    launch("Chrome-Headless");
+	   
 	    
 	     
 	}

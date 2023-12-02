@@ -1,24 +1,66 @@
 package utils;
 
+
+
+import org.testng.ITestContext;
+import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.TestListenerAdapter;
 
-public class Listeners extends TestListenerAdapter {
-	
-	public void onTestStart(ITestResult tr) {
-		System.out.println("Test Started");
-	}
-	
-	public void onTestSuccess(ITestResult tr) {
-		System.out.println("Test Passed");
-	}
-	
-	public void onTestFauilure(ITestResult tr) {
-		System.out.println("Test Failed");
-	}
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
-	public void onTestSkipped(ITestResult tr) {
-		System.out.println("Test Skipped");
-	}
+import base.ProjectSpecifications;
+
+public class Listeners extends ProjectSpecifications implements ITestListener {
+
 	
+	ExtentTest test;
+	
+	ExtentReports extent = ExtentReportClass.getReport();
+	
+
+    public void onTestStart(ITestResult result) {
+		
+		test = extent.createTest(result.getMethod().getMethodName());
+		
+		System.out.println("Test started");
+		
+	}
+    
+    public void onTestSuccess(ITestResult result) {
+    	
+    	test.log(Status.PASS, "Test Passed");
+    	System.out.println("Test Success");
+    }
+	
+    public void onTestFailure(ITestResult result) {
+    	
+    	test.fail(result.getThrowable());
+    	System.out.println("Test Failed");
+    	
+    	String filepath = null;
+    	
+    	try {
+    		
+    		filepath = CaptureScreen(result.getMethod().getMethodName());
+			
+		} catch (Exception e) {
+            e.printStackTrace();
+           
+		}
+    	test.addScreenCaptureFromPath(filepath, result.getMethod().getMethodName());
+    }
+
+	
+    public void onTestSkipped(ITestResult result) {
+    	
+    	System.out.println("Test Skipped");
+    }
+
+    public void onFinish(ITestContext context) {
+       extent.flush();
+    }
+
+
 }

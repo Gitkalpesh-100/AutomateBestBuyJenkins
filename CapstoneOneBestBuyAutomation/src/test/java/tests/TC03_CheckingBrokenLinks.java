@@ -18,7 +18,7 @@ public class TC03_CheckingBrokenLinks extends ProjectSpecifications{
 		home.chooseCountry();   	
 		
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap3A1");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
@@ -26,7 +26,7 @@ public class TC03_CheckingBrokenLinks extends ProjectSpecifications{
 		home.CheckBrokenLink("https://www.bestbuy.com");		
   
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap3A2");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
@@ -40,7 +40,7 @@ public class TC03_CheckingBrokenLinks extends ProjectSpecifications{
         home.CheckBrokenLink("https://www.bestbuy.com");   
         
         try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap3B1");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
@@ -48,7 +48,7 @@ public class TC03_CheckingBrokenLinks extends ProjectSpecifications{
         Assert.assertTrue(home.isLinkBroken(), "This is not a valid link");
         
         try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap3B2");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}

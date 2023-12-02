@@ -28,7 +28,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.github.dockerjava.api.model.Link;
 import org.openqa.selenium.interactions.Actions;
 
@@ -37,7 +40,9 @@ public class UtilClass<HttpURLConnection> {
 	public static WebDriver driver;
 
 	public void launch(String browser) {
-
+       
+		
+		ChromeOptions options = new ChromeOptions();
 		if (browser.equalsIgnoreCase("Chrome")) {
 
 			driver = new ChromeDriver();
@@ -47,7 +52,8 @@ public class UtilClass<HttpURLConnection> {
 
 		} else if (browser.equalsIgnoreCase("Chrome-Headless")) {
 
-			
+			options.addArguments("headless");
+			driver = new ChromeDriver(options);
 			}
 		else {
 			driver = new ChromeDriver();
@@ -146,7 +152,7 @@ public class UtilClass<HttpURLConnection> {
 				.findElement(By.xpath("(//div[@class ='fulfillment-add-to-cart-button'])[2]"));
 		addToCartButton.click();
 		
-	    UtilClass.CaptureScreen();
+		//UtilClass.CaptureScreen();
 		
 
 		WebElement goToCartButton = driver.findElement(By.xpath("//div[@class = 'go-to-cart-button']"));
@@ -154,7 +160,7 @@ public class UtilClass<HttpURLConnection> {
 		goToCartButton.click();
 		
 
-	    UtilClass.CaptureScreen();
+	  // CaptureScreen();
 
 	}
 	
@@ -187,13 +193,13 @@ public class UtilClass<HttpURLConnection> {
 		jsExecutor.executeScript("window.scrollTo(0,500)", addToCartButton1.getLocation().x, addToCartButton1.getLocation().y);
 		addToCartButton1.click();
 		
-		 UtilClass.CaptureScreen();
+		CaptureScreen("AddToCartButton1");
 		
 		WebElement goToCartButton = driver
 				.findElement(By.xpath("//a[@class='c-button c-button-secondary c-button-md c-button-block ']"));
 		goToCartButton.click();
 
-		 UtilClass.CaptureScreen();
+		CaptureScreen("GoToCartButton1");
 	}
 	
 	
@@ -225,12 +231,12 @@ public class UtilClass<HttpURLConnection> {
 		
 		addToCartButton2.click();
 		
-		UtilClass.CaptureScreen();
+		CaptureScreen("AddToCart");
 		
 		WebElement goToCartButton = driver.findElement(By.xpath("//a[@class='c-button c-button-secondary c-button-md c-button-block ']"));
 		goToCartButton.click();		
 		
-		UtilClass.CaptureScreen();
+		CaptureScreen("GoToCart");
 	}
 
 	
@@ -316,27 +322,19 @@ public class UtilClass<HttpURLConnection> {
 
 	}
 
-	public void HeadlessChrome() {
+	
 
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless=new");
-		options.addArguments("--disable-gpu");
-		WebDriver driver = new ChromeDriver(options);
-		driver.get("https://www.bestbuy.com");
-		System.out.println("Title of the page:" + driver.getTitle());
-	}
-
-	public static void CaptureScreen() throws IOException {
+	public String CaptureScreen(String snap) throws IOException {
 
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File destinationfile = new File("src/screenshots/" + System.currentTimeMillis() + ".png");
+		File destinationfile = new File("src/screenshots/"+ snap + System.currentTimeMillis() + ".png");
 		String absolutepath_screen = destinationfile.getAbsolutePath();
 
 		FileUtils.copyFile(srcFile, destinationfile);
 
 		System.out.println("Screenshot captured at: " + absolutepath_screen);
 
-		//return absolutepath_screen;
+		return absolutepath_screen;
 
 	}
 
@@ -345,4 +343,5 @@ public class UtilClass<HttpURLConnection> {
 		js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 	}
 
+	
 }

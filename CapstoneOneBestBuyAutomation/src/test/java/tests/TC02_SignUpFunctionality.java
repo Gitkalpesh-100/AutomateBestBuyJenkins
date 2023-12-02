@@ -30,7 +30,7 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 		signup.mobilePhoneNumber("9889988911");
 		
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap2A1");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
@@ -38,7 +38,7 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 		signup.createAnAccountButton();	
 		
 		try {
-		    UtilClass.CaptureScreen();
+		     CaptureScreen("Snap2A2");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
@@ -61,7 +61,7 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 	        signup.mobilePhoneNumber("123"); //Incomplete phone number                  
 
 	        try {
-			    UtilClass.CaptureScreen();
+			    CaptureScreen("Snap2B1");
 			} catch (IOException e) {
 			    e.printStackTrace();
 			}
@@ -69,7 +69,7 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 	        signup.createAnAccountButton();
 	        
 	        try {
-			    UtilClass.CaptureScreen();
+			    CaptureScreen("Sanp2B2");
 			} catch (IOException e) {
 			    e.printStackTrace();
 			}

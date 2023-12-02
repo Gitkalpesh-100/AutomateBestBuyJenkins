@@ -10,9 +10,10 @@ import pages.CheckoutPage;
 import pages.HomePage;
 import utils.UtilClass;
 
-@Test
+
 public class TC09_NavigateCheckoutAndDummyPayment extends ProjectSpecifications {
 
+	@Test
 	public void NavigateCheckoutAndDummyPayment() {
 
 		HomePage home = new HomePage();

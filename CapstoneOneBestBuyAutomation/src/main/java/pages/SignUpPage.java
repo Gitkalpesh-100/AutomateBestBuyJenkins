@@ -63,5 +63,7 @@ public class SignUpPage extends ProjectSpecifications {
 		
 		click(createAnAccountButton);
 	}
+   
+   
 
 }

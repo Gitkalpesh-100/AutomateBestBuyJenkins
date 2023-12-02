@@ -5,10 +5,11 @@ import org.testng.annotations.Test;
 
 import base.ProjectSpecifications;
 
-@Test
+
 
 public class TC10_HeadlessChrome extends ProjectSpecifications {
 	
+	@Test
 	public void HeadlessChrome() {
 		
 		HeadlessChrome();
