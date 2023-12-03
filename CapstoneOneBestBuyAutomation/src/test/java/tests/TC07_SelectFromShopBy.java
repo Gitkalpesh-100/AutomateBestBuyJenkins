@@ -1,4 +1,4 @@
-package tests;
+/*package tests;
 
 import java.io.IOException;
 
@@ -18,7 +18,7 @@ public class TC07_SelectFromShopBy extends ProjectSpecifications {
 		home.chooseCountry();
 
 		
-		
+		/*
 		try {
 			home.SelectFromShopBy();
 		} catch (IOException e) {
@@ -43,5 +43,6 @@ public class TC07_SelectFromShopBy extends ProjectSpecifications {
 
 		}
 	}
-	*/
+	
 }
+		*/

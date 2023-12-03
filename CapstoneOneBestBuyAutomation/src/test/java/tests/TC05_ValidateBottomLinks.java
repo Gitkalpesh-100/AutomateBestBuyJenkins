@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 import base.ProjectSpecifications;
 import pages.HomePage;
+import pages.ValidataBottomLinksPage;
+import pages.ValidateTitlePage;
 import utils.UtilClass;
 
 public class TC05_ValidateBottomLinks extends ProjectSpecifications {
@@ -18,146 +20,151 @@ public class TC05_ValidateBottomLinks extends ProjectSpecifications {
 		HomePage home = new HomePage();
 		home.chooseCountry();
 		home.scroll(); 
-		home.Accessibility();
+		
+		ValidateTitlePage vt = new ValidateTitlePage();
+		ValidataBottomLinksPage vbl = new ValidataBottomLinksPage();
+		
+		
+		vbl.Accessibility();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A1");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Accessibility - Best Buy");
+		vbl.validateTitle("Accessibility - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A2");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
 		home.scroll(); 
-		home.TermsandConditons();
+		vbl.TermsandConditons();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A3");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("BestBuy.com Terms and Conditions");
+		vbl.validateTitle("BestBuy.com Terms and Conditions");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A4");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 	
 		home.scroll(); 
-		home.Privacy();
+		vbl.Privacy();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A5");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Privacy Policy Hub - Best Buy");
+		vbl.validateTitle("Privacy Policy Hub - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		
-		home.scroll();
-		home.InterestBasedAds();
-		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		home.validateTitle("Interest-Based Ads - Best Buy");
-		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A6");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
 		home.scroll();
-		home.StatePrivacyRights();
+		vbl.InterestBasedAds();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A7");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("State Privacy Rights - Best Buy");
+		vbl.validateTitle("Interest-Based Ads - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		
-		home.scroll();
-		home.HealthDataPrivacy();
-		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		home.validateTitle("Privacy Policy Hub - Best Buy");
-		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A8");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
 		home.scroll();
-		home.DoNotSellOrShareMyPersonalInformation();
+		vbl.StatePrivacyRights();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A9");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Start Request - Best Buy");
+		vbl.validateTitle("State Privacy Rights - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A10");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.clickReturntopreviouspage();
+		
+		home.scroll();
+		vbl.HealthDataPrivacy();
+		try {
+			CaptureScreen("Snap5A11");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		vbl.validateTitle("Privacy Policy Hub - Best Buy");
+		try {
+			CaptureScreen("Snap5A12");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		
+		home.scroll();
+		vbl.DoNotSellOrShareMyPersonalInformation();
+		try {
+			CaptureScreen("Snap5A13");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		vbl.validateTitle("Start Request - Best Buy");
+		try {
+			CaptureScreen("Snap5A14");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		vt.clickReturntopreviouspage();
 		home.scroll();
 		
-		home.LimitUseOfMySensitivePersonalInformation();
+		vbl.LimitUseOfMySensitivePersonalInformation();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A14");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A15");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
 		home.validateTitle("Best Buy");
-		home.clickReturntopreviouspage();
+		vt.clickReturntopreviouspage();
 		
 		home.scroll();
-		home.TargetedAdvertisingOptOut();
+		vbl.TargetedAdvertisingOptOut();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A16");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Start Request - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A17");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.clickReturntopreviouspage();
+		vt.clickReturntopreviouspage();
 		
 		home.scroll();
-		home.CASupplyChainTransparencyAct();
+		vbl.CASupplyChainTransparencyAct();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A18");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("California Supply Chain Transparency Act - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5A19");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
@@ -169,144 +176,148 @@ public class TC05_ValidateBottomLinks extends ProjectSpecifications {
 		HomePage home = new HomePage();
 		home.chooseCountry();
 		home.scroll(); 
-		home.Accessibility();
+		
+		ValidateTitlePage vt = new ValidateTitlePage();
+		ValidataBottomLinksPage vbl = new ValidataBottomLinksPage();
+		
+		vbl.Accessibility();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B1");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Accessibility - Best Buy");
+		vbl.validateTitle("Accessibility - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B2");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
 		home.scroll(); 
-		home.TermsandConditons();
+		vbl.TermsandConditons();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B3");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("BestBuy.com Terms and Conditions");
+		vbl.validateTitle("BestBuy.com Terms and Conditions");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B4");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 	
 		home.scroll(); 
-		home.Privacy();
+		vbl.Privacy();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B5");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		vbl.validateTitle("Privacy Policy Hub - Best Buy");
+		try {
+			CaptureScreen("Snap5B6");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		
+		home.scroll();
+		vbl.InterestBasedAds();
+		try {
+			CaptureScreen("Snap5B7");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		vbl.validateTitle("Interest-Based Ads - Best Buy");
+		try {
+			CaptureScreen("Snap5B8");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		
+		home.scroll();
+		vbl.StatePrivacyRights();
+		try {
+			CaptureScreen("Snap5B9");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		vbl.validateTitle("State Privacy Rights - Best Buy");
+		try {
+			CaptureScreen("Snap5B10");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		
+		home.scroll();
+		vbl.HealthDataPrivacy();
+		try {
+			CaptureScreen("Snap5B11");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Privacy Policy Hub - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B12");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
 		home.scroll();
-		home.InterestBasedAds();
+		vbl.DoNotSellOrShareMyPersonalInformation();
 		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		home.validateTitle("Interest-Based Ads - Best Buy");
-		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		
-		home.scroll();
-		home.StatePrivacyRights();
-		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		home.validateTitle("State Privacy Rights - Best Buy");
-		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		
-		home.scroll();
-		home.HealthDataPrivacy();
-		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		home.validateTitle("Privacy Policy Hub - Best Buy");
-		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		
-		home.scroll();
-		home.DoNotSellOrShareMyPersonalInformation();
-		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B13");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Start Request - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B14");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.clickReturntopreviouspage();
+		vt.clickReturntopreviouspage();
 		
 		home.scroll();
-		home.LimitUseOfMySensitivePersonalInformation();
+		vbl.LimitUseOfMySensitivePersonalInformation();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B15");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B16");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.clickReturntopreviouspage();
+		vt.clickReturntopreviouspage();
 		
 		home.scroll();
-		home.TargetedAdvertisingOptOut();
+		vbl.TargetedAdvertisingOptOut();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B17");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Start Request - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B18");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.clickReturntopreviouspage();
+		vt.clickReturntopreviouspage();
 		
 		home.scroll();
-		home.CASupplyChainTransparencyAct();
+		vbl.CASupplyChainTransparencyAct();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B19");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("California Supply Chain Transparency Act - Best Bui");
+		vbl.validateTitle("California Supply Chain Transparency Act - Best Bui");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap5B20");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}

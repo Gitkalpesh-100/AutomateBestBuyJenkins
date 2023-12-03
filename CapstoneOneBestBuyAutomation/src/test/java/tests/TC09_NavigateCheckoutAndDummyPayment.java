@@ -41,7 +41,7 @@ public class TC09_NavigateCheckoutAndDummyPayment extends ProjectSpecifications 
 		check.userphonenumber("980-563-1724");
 		check.continuetoscheduledelivery();
 		try {
-			UtilClass.CaptureScreen();
+			CaptureScreen("Snap9A1");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -60,7 +60,7 @@ public class TC09_NavigateCheckoutAndDummyPayment extends ProjectSpecifications 
 		check.placeyourorder();
 
 		try {
-			UtilClass.CaptureScreen();
+			CaptureScreen("Snap9A2");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -105,7 +105,7 @@ public class TC09_NavigateCheckoutAndDummyPayment extends ProjectSpecifications 
 			}
 
 			try {
-				UtilClass.CaptureScreen();
+				CaptureScreen("Snap9B1");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -120,7 +120,7 @@ public class TC09_NavigateCheckoutAndDummyPayment extends ProjectSpecifications 
 			check.placeyourorder();
 
 			try {
-				UtilClass.CaptureScreen();
+				CaptureScreen("Snap9B2");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

@@ -36,6 +36,11 @@ public class Listeners extends ProjectSpecifications implements ITestListener {
 	
     public void onTestFailure(ITestResult result) {
     	
+    	 if (test == null) {
+    	       
+    	        test = extent.createTest(result.getMethod().getMethodName());
+    	    }
+    	
     	test.fail(result.getThrowable());
     	System.out.println("Test Failed");
     	

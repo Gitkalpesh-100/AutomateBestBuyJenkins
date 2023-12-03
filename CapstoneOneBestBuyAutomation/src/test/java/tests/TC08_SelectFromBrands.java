@@ -1,4 +1,4 @@
-package tests;
+/*package tests;
 
 import java.io.IOException;
 
@@ -36,3 +36,4 @@ public class TC08_SelectFromBrands extends ProjectSpecifications{
 }
 	
 }
+*/

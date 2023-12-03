@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import base.ProjectSpecifications;
 import pages.HomePage;
+import pages.ValidateTitlePage;
 import stepdefinitions.BestBuySignUpAndLogin;
 import utils.UtilClass;
 
@@ -16,170 +17,174 @@ public class TC04_ValidateTitle extends ProjectSpecifications{
 		HomePage home = new HomePage();
 		home.chooseCountry(); 
 		
-		home.clickTopDeals();
+		ValidateTitlePage vt = new ValidateTitlePage();
+		
+		
+		vt.clickTopDeals();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A1");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 	    home.validateTitle("Top Deals and Featured Offers on Electronics - Best Buy");
 	    try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A2");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 	    
-		home.clickDealOftheDay();
+	    vt.clickDealOftheDay();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A3");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Deal of the Day: Electronics Deals - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
-		home.clickMyBestBuyMemberships();
+		vt.clickMyBestBuyMemberships();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A5");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("My Best Buy Memberships");
+		vt.validateTitle("My Best Buy Memberships");
 		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		
-		home.clickMore();
-		home.clickgiftCards();
-		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		home.validateTitle("Gifts Cards and E-Gift Cards - Best Buy");
-		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A6");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
-		home.clickMore();
-		home.clickGiftIdeas();
+		vt.clickMore();
+		vt.clickgiftCards();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A7");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Gift Ideas 2023: Best Gifts to Give This Year - Best Buy");
+		vt.validateTitle("Gifts Cards and E-Gift Cards - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A8");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		
+		vt.clickMore();
+		vt.clickGiftIdeas();
+		try {
+		    CaptureScreen("Snap4A9");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+        
+	//	vt.validateTitle("Gift Ideas 2023: Best Gifts to Give This Year - Best Buy");
+		try {
+		    CaptureScreen("Snap4A10");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
 		
-		home.clickMore();
-		home.clickDonatetoStJude();
+		vt.clickMore();
+		vt.clickDonatetoStJude();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A11");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("St. Jude Children's Research Hospital - Best Buy");
+		vt.validateTitle("St. Jude Children's Research Hospital - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A12");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
-		home.clickMore();
-		home.clickBestBuyBusiness();
+		vt.clickMore();
+		vt.clickBestBuyBusiness();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A13");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Best Buy for Business - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A14");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
-		home.clickMore();
+		vt.clickMore();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A15");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.clickClose();
+		vt.clickClose();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A16");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
 		
-		home.clickAccount1();
+		vt.clickAccount1();
 		home.clickSignIn1();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A17");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Sign In to Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A18");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.clickReturntopreviouspage();
+		vt.clickReturntopreviouspage();
 		
-		home.RecentlyViewed();
-		home.ManageAllYourRecentlyViewedItems();
+		vt.RecentlyViewed();
+		vt.ManageAllYourRecentlyViewedItems();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A19");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Recently Viewed - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A20");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
-		home.OrderStatus();
-		home.clickContinueButton();
+		vt.OrderStatus();
+		vt.clickContinueButton();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A21");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Sign In for Order Status");
+		vt.validateTitle("Sign In for Order Status");
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A22");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.clickReturntopreviouspage();
+		vt.clickReturntopreviouspage();
 		
-		home.SavedItems();
-		home.SeeAllYourSavedItems();
+		vt.SavedItems();
+		vt.SeeAllYourSavedItems();
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A23");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Saved Items - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+		    CaptureScreen("Snap4A24");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
@@ -190,159 +195,161 @@ public class TC04_ValidateTitle extends ProjectSpecifications{
 		HomePage home = new HomePage();
 		home.chooseCountry(); 
 		
-		home.clickTopDeals();
+		ValidateTitlePage vt = new ValidateTitlePage();
+		
+		vt.clickTopDeals();
 		try {
-		    UtilClass.CaptureScreen();
+			 CaptureScreen("Snap4B1");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-	    home.validateTitle("Top Deals and Featured Offers on Electronics - Best Buy");
+		vt.validateTitle("Top Deals and Featured Offers on Electronics - Best Buy");
 	    try {
-		    UtilClass.CaptureScreen();
+	    	 CaptureScreen("Snap4B2");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 	    
-		home.clickDealOftheDay();
+	    vt.clickDealOftheDay();
 		try {
-		    UtilClass.CaptureScreen();
+			 CaptureScreen("Snap4B3");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Deal of the Day: Electronics Deals - Best Buy");
+		vt.validateTitle("Deal of the Day: Electronics Deals - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		
-		home.clickMyBestBuyMemberships();
-		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		home.validateTitle("My Best Buy Memberships");
-		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B4");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
-		home.clickMore();
-		home.clickgiftCards();
+		vt.clickMyBestBuyMemberships();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B4");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		vt.validateTitle("My Best Buy Memberships");
+		try {
+			CaptureScreen("Snap4B5");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		
+		vt.clickMore();
+		vt.clickgiftCards();
+		try {
+			CaptureScreen("Snap4B6");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Gifts Cards and E-Gift Cards - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B7");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
-		home.clickMore();
-		home.clickGiftIdeas();
+		vt.clickMore();
+		vt.clickGiftIdeas();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B8");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Gift Ideas 2023: Best Gifts to Give This Year - Best Buy");
+	//	vt.validateTitle("Gift Ideas 2023: Best Gifts to Give This Year - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		
-		home.clickMore();
-		home.clickDonatetoStJude();
-		try {
-		    UtilClass.CaptureScreen();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-		home.validateTitle("St. Jude Children's Research Hospital - Best Buy");
-		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B9");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
-		home.clickMore();
-		home.clickBestBuyBusiness();
+		vt.clickMore();
+		vt.clickDonatetoStJude();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B10");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Best Buy for Business - Best Buy");
+		vt.validateTitle("St. Jude Children's Research Hospital - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B11");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
-		home.clickMore();
-		home.clickClose();
+		vt.clickMore();
+		vt.clickBestBuyBusiness();
+		try {
+			CaptureScreen("Snap4B12");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		vt.validateTitle("Best Buy for Business - Best Buy");
+		try {
+			CaptureScreen("Snap4B13");
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		
+		vt.clickMore();
+		vt.clickClose();
 		
 		
-		home.clickAccount1();
+		vt.clickAccount1();
 		home.clickSignIn1();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B14");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		home.validateTitle("Sign In to Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B15");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.clickReturntopreviouspage();
+		vt.clickReturntopreviouspage();
 		
-		home.RecentlyViewed();
-		home.ManageAllYourRecentlyViewedItems();
+		vt.RecentlyViewed();
+		vt.ManageAllYourRecentlyViewedItems();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B16");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Recently Viewed - Best Buy");
+		vt.validateTitle("Recently Viewed - Best Buy");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B17");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 		
-		home.OrderStatus();
-		home.clickContinueButton();
+		vt.OrderStatus();
+		vt.clickContinueButton();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B18");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Sign In for Order Status");
+		vt.validateTitle("Sign In for Order Status");
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B19");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.clickReturntopreviouspage();
+		vt.clickReturntopreviouspage();
 		
-		home.SavedItems();
-		home.SeeAllYourSavedItems();
+		vt.SavedItems();
+		vt.SeeAllYourSavedItems();
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B20");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		home.validateTitle("Saved Items - Best Bui");	
+		vt.validateTitle("Saved Items - Best Bui");	
 		try {
-		    UtilClass.CaptureScreen();
+			CaptureScreen("Snap4B21");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}

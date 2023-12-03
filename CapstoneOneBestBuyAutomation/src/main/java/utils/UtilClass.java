@@ -136,6 +136,7 @@ public class UtilClass<HttpURLConnection> {
 		Assert.assertEquals(my_title, expected_title);
 	}
 
+	/*
 	public void AddingItemToCart() throws InterruptedException, IOException {
 
 		WebElement searchBox = driver.findElement(By.xpath("//input[@class='search-input']"));
@@ -163,9 +164,9 @@ public class UtilClass<HttpURLConnection> {
 	  // CaptureScreen();
 
 	}
+	*/
 	
-	
-
+/*
 	public void SelectFromShopBy() throws IOException {
 
 		WebElement hamburgericon = driver
@@ -200,7 +201,7 @@ public class UtilClass<HttpURLConnection> {
 		goToCartButton.click();
 
 		CaptureScreen("GoToCartButton1");
-	}
+	}*/
 	
 	
 
@@ -321,9 +322,7 @@ public class UtilClass<HttpURLConnection> {
 		continuetopaymentinformation.click();
 
 	}
-
 	
-
 	public String CaptureScreen(String snap) throws IOException {
 
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -337,7 +336,7 @@ public class UtilClass<HttpURLConnection> {
 		return absolutepath_screen;
 
 	}
-
+	
 	public void scroll() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
