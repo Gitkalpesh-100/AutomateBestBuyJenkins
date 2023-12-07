@@ -22,26 +22,6 @@ public class HomePage extends ProjectSpecifications {
 	@FindBy(xpath = "//a[text()=\"Create Account\"]")
 	WebElement CreateAccount;
 
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-		
-
-	
 	@FindBy (xpath = "//input[@class='search-input']")
 	WebElement seacrhBox;
 	
@@ -49,7 +29,7 @@ public class HomePage extends ProjectSpecifications {
 	WebElement searchIcon;
 	
 	
-	
+	/*
 	@FindBy (xpath = "//*[@data-sku-id = '6406513' and contains(text(), 'Add to Cart')]")
     WebElement product;     
 	
@@ -94,7 +74,7 @@ public class HomePage extends ProjectSpecifications {
 	
 	@FindBy (xpath = "//div[@class = 'go-to-cart-button']")
 	WebElement gotoCartButton;
-	
+	*/
 	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
@@ -153,7 +133,7 @@ public class HomePage extends ProjectSpecifications {
 		click(searchIcon);
 	}
 
-	
+	/*
 	public void clickproduct() {
 		click(product);
 	}
@@ -215,7 +195,7 @@ public class HomePage extends ProjectSpecifications {
 		click(gotoCartButton);
 	}
 	
-
+*/
 	public boolean isLinkBroken() {
 			return false;
 	}

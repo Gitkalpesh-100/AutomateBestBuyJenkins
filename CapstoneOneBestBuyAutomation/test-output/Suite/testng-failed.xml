@@ -6,15 +6,10 @@
     <listener class-name="utils.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <parameter name="password" value="Demo123"/>
     <parameter name="browser" value="Chrome"/>
+    <parameter name="username" value="demo1@gmail.com"/>
     <classes>
-      <class name="tests.TC01_LoginFunctionality">
-        <methods>
-          <include name="SignInNegativeTest"/>
-          <include name="launchBrowser"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- tests.TC01_LoginFunctionality -->
       <class name="tests.TC03_CheckingBrokenLinks">
         <methods>
           <include name="launchBrowser"/>
@@ -22,6 +17,27 @@
           <include name="CheckNonBrokenLinksTest"/>
         </methods>
       </class> <!-- tests.TC03_CheckingBrokenLinks -->
+      <class name="tests.TC02_SignUpFunctionality">
+        <methods>
+          <include name="SignUpNegativeTest"/>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.TC02_SignUpFunctionality -->
+      <class name="tests.TC05_ValidateBottomLinks">
+        <methods>
+          <include name="validateBottomLinksNegative"/>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.TC05_ValidateBottomLinks -->
+      <class name="tests.TC04_ValidateTitle">
+        <methods>
+          <include name="NegativeValidateTitle"/>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.TC04_ValidateTitle -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

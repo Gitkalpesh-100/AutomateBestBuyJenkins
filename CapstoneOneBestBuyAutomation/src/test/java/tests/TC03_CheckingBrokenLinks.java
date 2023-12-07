@@ -10,49 +10,47 @@ import pages.HomePage;
 import pages.SignInPage;
 import utils.UtilClass;
 
-public class TC03_CheckingBrokenLinks extends ProjectSpecifications{
+public class TC03_CheckingBrokenLinks extends ProjectSpecifications {
 	@Test(priority = 1)
 	public void CheckBrokenLinksTest() {
-		
+
 		HomePage home = new HomePage();
-		home.chooseCountry();   	
-		
+		home.chooseCountry();
+
 		try {
-		    CaptureScreen("Snap3A1");
+			CaptureScreen("Snap3A1");
 		} catch (IOException e) {
-		    e.printStackTrace();
+			e.printStackTrace();
 		}
-		
-		home.CheckBrokenLink("https://www.bestbuy.com");		
-  
+
+		home.CheckBrokenLink("https://www.bestbuy.com");
+
 		try {
-		    CaptureScreen("Snap3A2");
+			CaptureScreen("Snap3A2");
 		} catch (IOException e) {
-		    e.printStackTrace();
+			e.printStackTrace();
 		}
-		
 	}
+
 	@Test(priority = 2)
 	public void CheckNonBrokenLinksTest() {
 
-        HomePage home = new HomePage();
-        home.chooseCountry();
-        home.CheckBrokenLink("https://www.bestbuy.com");   
-        
-        try {
-		    CaptureScreen("Snap3B1");
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-        
-        Assert.assertTrue(home.isLinkBroken(), "This is not a valid link");
-        
-        try {
-		    CaptureScreen("Snap3B2");
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-	
-	}
+		HomePage home = new HomePage();
+		home.chooseCountry();
+		home.CheckBrokenLink("https://www.bestbuy.com");
 
+		try {
+			CaptureScreen("Snap3B1");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		Assert.assertTrue(home.isLinkBroken(), "This is not a valid link");
+
+		try {
+			CaptureScreen("Snap3B2");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }

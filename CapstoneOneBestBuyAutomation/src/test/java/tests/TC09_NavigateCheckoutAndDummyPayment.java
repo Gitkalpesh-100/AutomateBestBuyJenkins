@@ -10,23 +10,23 @@ import pages.CheckoutPage;
 import pages.HomePage;
 import utils.UtilClass;
 
-
 public class TC09_NavigateCheckoutAndDummyPayment extends ProjectSpecifications {
 
 	@Test
-	public void NavigateCheckoutAndDummyPayment() {
+	public void NavigateCheckoutAndDummyPayment() throws IOException {
 
 		HomePage home = new HomePage();
 		home.chooseCountry();
-		home.hamburgericon();
-		home.Brands();
-		home.Samsung();
-		home.TvsAndHomeTheater();
-		home.Tvs();
-		home.AddToCartButton2();
-		home.GotoCartButton();
 
 		CheckoutPage check = new CheckoutPage();
+		check.hamburgericon();
+		check.brands();
+		check.samsung();
+		check.tvandhometheater();
+		check.tvs();
+		check.product4();
+		check.addToCartButton3();
+		check.goToCartButton3();
 		check.CheckoutButton();
 		check.ContinueasGuest();
 		check.switchalltodelivery();
@@ -39,13 +39,14 @@ public class TC09_NavigateCheckoutAndDummyPayment extends ProjectSpecifications 
 		check.apply();
 		check.useremailaddress("useremail@gmail.com");
 		check.userphonenumber("980-563-1724");
+		CaptureScreen("Snap9A1");
 		check.continuetoscheduledelivery();
 		try {
-			CaptureScreen("Snap9A1");
+			CaptureScreen("Snap9A2");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	    check.creditcardordebitcardnumber("4263 9826 0269 5299");
+		check.creditcardordebitcardnumber("4263 9826 0269 5299");
 		check.expirationmonth("2");
 		check.expirationyear("2026");
 		check.securitycode("837");
@@ -64,26 +65,25 @@ public class TC09_NavigateCheckoutAndDummyPayment extends ProjectSpecifications 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
-	
-	 @Test public class TC09_NavigateCheckoutAndDummyPaymentNegative extends
-	 ProjectSpecifications {
-	 
-	  public void NavigateCheckoutAndDummyPayment() {
-	 
-		  HomePage home = new HomePage();
+	public class TC09_NavigateCheckoutAndDummyPaymentNegative extends ProjectSpecifications {
+
+		@Test
+		public void NavigateCheckoutAndDummyPayment() {
+
+			HomePage home = new HomePage();
 			home.chooseCountry();
-			home.hamburgericon();
-			home.Brands();
-			home.Samsung();
-			home.TvsAndHomeTheater();
-			home.Tvs();
-			home.AddToCartButton2();
-			home.GotoCartButton();
 
 			CheckoutPage check = new CheckoutPage();
+			check.hamburgericon();
+			check.brands();
+			check.samsung();
+			check.tvandhometheater();
+			check.tvs();
+			check.product4();
+			check.addToCartButton3();
+			check.goToCartButton3();
 			check.CheckoutButton();
 			check.ContinueasGuest();
 			check.switchalltodelivery();
@@ -124,9 +124,6 @@ public class TC09_NavigateCheckoutAndDummyPayment extends ProjectSpecifications 
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-
-	 }
-	 
-  }
-	 
+		}
+	}
 }

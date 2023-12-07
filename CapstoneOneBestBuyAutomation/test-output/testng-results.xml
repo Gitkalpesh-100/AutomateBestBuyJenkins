@@ -1,25 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-03T20:43:27 IST" name="Default suite" finished-at="2023-12-03T20:45:38 IST" duration-ms="131134">
+  <suite started-at="2023-12-07T22:32:59 IST" name="Default suite" finished-at="2023-12-07T22:34:02 IST" duration-ms="63192">
     <groups>
     </groups>
-    <test started-at="2023-12-03T20:43:27 IST" name="Default test" finished-at="2023-12-03T20:45:38 IST" duration-ms="131134">
-      <class name="tests.TC06_AddingItemToCart">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC06_AddingItemToCart@198b6731]" started-at="2023-12-03T20:43:27 IST" name="launchBrowser" finished-at="2023-12-03T20:43:31 IST" duration-ms="3835" status="PASS">
+    <test started-at="2023-12-07T22:32:59 IST" name="Default test" finished-at="2023-12-07T22:34:02 IST" duration-ms="63192">
+      <class name="tests.TC01_LoginFunctionality">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.TC01_LoginFunctionality@22fcf7ab]" started-at="2023-12-07T22:32:59 IST" name="setup" finished-at="2023-12-07T22:32:59 IST" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC01_LoginFunctionality@22fcf7ab]" started-at="2023-12-07T22:33:00 IST" name="launchBrowser" finished-at="2023-12-07T22:33:05 IST" duration-ms="4748" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="AddingItemToCart()[pri:1, instance:tests.TC06_AddingItemToCart@198b6731]" started-at="2023-12-03T20:43:31 IST" name="AddingItemToCart" finished-at="2023-12-03T20:45:38 IST" duration-ms="127000" status="PASS">
+        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:1, instance:tests.TC01_LoginFunctionality@22fcf7ab]" started-at="2023-12-07T22:33:05 IST" name="LoginTest" data-provider="getInputData" finished-at="2023-12-07T22:33:22 IST" duration-ms="16855" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddingItemToCart -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC06_AddingItemToCart@198b6731]" started-at="2023-12-03T20:45:38 IST" name="closeBrowser" finished-at="2023-12-03T20:45:38 IST" duration-ms="241" status="PASS">
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC01_LoginFunctionality@22fcf7ab]" started-at="2023-12-07T22:33:22 IST" name="closeBrowser" finished-at="2023-12-07T22:33:22 IST" duration-ms="269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.TC06_AddingItemToCart -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC01_LoginFunctionality@22fcf7ab]" started-at="2023-12-07T22:33:22 IST" name="launchBrowser" finished-at="2023-12-07T22:33:26 IST" duration-ms="3336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:1, instance:tests.TC01_LoginFunctionality@22fcf7ab]" started-at="2023-12-07T22:33:26 IST" name="LoginTest" data-provider="getInputData" finished-at="2023-12-07T22:33:45 IST" duration-ms="19586" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC01_LoginFunctionality@22fcf7ab]" started-at="2023-12-07T22:33:45 IST" name="closeBrowser" finished-at="2023-12-07T22:33:46 IST" duration-ms="347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:tests.TC01_LoginFunctionality@22fcf7ab]" started-at="2023-12-07T22:33:46 IST" name="launchBrowser" finished-at="2023-12-07T22:33:49 IST" duration-ms="3896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:1, instance:tests.TC01_LoginFunctionality@22fcf7ab]" started-at="2023-12-07T22:33:49 IST" name="LoginTest" data-provider="getInputData" finished-at="2023-12-07T22:34:02 IST" duration-ms="12394" status="FAIL">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy18.sendKeys(Unknown Source)
+at utils.UtilClass.sendKeys(UtilClass.java:86)
+at pages.SignInPage.emailAddress(SignInPage.java:26)
+at tests.TC01_LoginFunctionality.LoginTest(TC01_LoginFunctionality.java:43)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.TC01_LoginFunctionality@22fcf7ab]" started-at="2023-12-07T22:34:02 IST" name="closeBrowser" finished-at="2023-12-07T22:34:02 IST" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.TC01_LoginFunctionality -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

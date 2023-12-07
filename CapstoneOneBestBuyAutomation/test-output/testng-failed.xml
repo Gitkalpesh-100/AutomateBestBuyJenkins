@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TC06_AddingItemToCart">
+      <class name="tests.TC01_LoginFunctionality">
         <methods>
-          <include name="AddingItemToCart"/>
           <include name="launchBrowser"/>
           <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="LoginTest" invocation-numbers="2"/>
         </methods>
-      </class> <!-- tests.TC06_AddingItemToCart -->
+      </class> <!-- tests.TC01_LoginFunctionality -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,6 +2,8 @@ package tests;
 
 import java.io.IOException;
 
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.internal.Utils;
 
@@ -14,8 +16,13 @@ import utils.UtilClass;
 
 public class TC02_SignUpFunctionality extends ProjectSpecifications {
 	
-	@Test(priority = 1)
-	public void SignUpTest() {
+	@BeforeTest()
+	public void setup() {
+		sheetName = "SignUpTest";//same name for the sheet in excel sheet
+	}
+	
+	@Test(priority = 1, dataProvider = "getInputData")
+	public void SignUpTest(String firstName, String lastName, String password, String confirmPassword, String mobilePhoneNumber) {
 		
 		HomePage home = new HomePage();
 		home.chooseCountry();       
@@ -23,11 +30,14 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 		home.clickCreateAccount();
 		
 		SignUpPage signup = new SignUpPage();
-		signup.firstName("First");
-		signup.lastName("Last");
-		signup.password("First@1");
-		signup.confirmPassword("First@1");
-		signup.mobilePhoneNumber("9889988911");
+		signup.firstName(firstName);
+		signup.lastName(lastName);
+		signup.password(password);
+		signup.confirmPassword(confirmPassword);
+		signup.mobilePhoneNumber(mobilePhoneNumber);
+		
+		
+		System.out.println("");
 		
 		try {
 		    CaptureScreen("Snap2A1");
@@ -73,7 +83,7 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 			} catch (IOException e) {
 			    e.printStackTrace();
 			}
-
+	        Assert.assertTrue(signup.isSignUpFailed(), "The Sign In should fail, but it passed.");
 	 }
 	
 }

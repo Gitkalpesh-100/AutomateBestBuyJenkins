@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.internal.Utils;
@@ -22,19 +23,25 @@ import utils.UtilClass;
 
 
 public class TC01_LoginFunctionality extends ProjectSpecifications {
-	@Test(priority = 1)
-	public void SignInTest(String userName, String password) throws IOException {
+	
+	@BeforeTest()
+	public void setup() {
+		sheetName = "LoginTest";//same name for the sheet in excel sheet
+	}
+	
+	@Test(priority = 1, dataProvider = "getInputData")
+	public void LoginTest(String userName, String password) throws IOException {
 		HomePage home = new HomePage();
 		home.chooseCountry(); 
 		
 		ValidateTitlePage vt = new ValidateTitlePage();
-		vt.SavedItems();
+		//vt.SavedItems();
 		home.clickAccount();
 		home.clickSignIn();
 		System.out.println(driver.getTitle());	
 		SignInPage signin = new SignInPage();
-		signin.emailAddress("demo1@gmail.com");
-		signin.password("Demo123");
+		signin.emailAddress(userName);
+		signin.password(password);
 		try {
 		    CaptureScreen("Snap1A1");
 		} catch (IOException e) {
@@ -47,7 +54,7 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 		    e.printStackTrace();
 		}
 	}
-			
+		/*	
 		@DataProvider(name = "loginTestData")
 		public Object[][] LoginData(){
 		{		
@@ -58,17 +65,16 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 			data [1][1] = "Test123";		
 			return data;
 		}
-		    
-	}
+		 */   
 	
-	
-	@Test(priority = 2)
+
+	@Test(priority = 2, dataProvider = "getInputData")
 	public void SignInNegativeTest(String userName, String password) throws IOException {
 	    HomePage home = new HomePage();
 	    home.chooseCountry();
 	    
 	    ValidateTitlePage vt = new ValidateTitlePage();
-	    vt.SavedItems();
+	  //  vt.SavedItems();
 	    
 	    home.clickAccount();
 	    home.clickSignIn();
@@ -91,7 +97,7 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 	    Assert.assertTrue(signin.isSignInFailed(), "The Sign In should fail, but it passed.");
 	  
 	}
-	@DataProvider(name = "loginTestData")
+	@DataProvider(name = "loginTestData1")
 	public Object [] [] loginData()
 	{
 		Object[][] data = new Object[2][2];

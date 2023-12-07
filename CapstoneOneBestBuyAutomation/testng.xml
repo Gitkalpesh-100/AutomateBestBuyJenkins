@@ -6,18 +6,19 @@
 	</listeners>
 
 
-	<parameter name="url" value="https://www.bestbuy.com"></parameter>
 
 	<test thread-count="5" name="Test">
 
-		<parameter name="browser" value="Chrome"></parameter>
-		<parameter name="username" value="demo1@gmail.com"></parameter>
-		<parameter name="password" value="Demo123"></parameter>
+	<parameter name="url" value="https://www.bestbuy.com"></parameter>
 
+		
 		<classes>
+			
 			<class name="tests.TC01_LoginFunctionality"></class>
 			<class name="tests.TC02_SignUpFunctionality"></class>
 			<class name="tests.TC03_CheckingBrokenLinks"></class>
+			<class name="tests.TC04_ValidateTitle"></class>
+			<class name="tests.TC05_ValidateBottomLinks"></class>
 		</classes>
 		
 	</test> <!--
