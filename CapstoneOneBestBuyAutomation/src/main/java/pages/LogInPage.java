@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import base.ProjectSpecifications;
 
-public class SignInPage extends ProjectSpecifications {
+public class LogInPage extends ProjectSpecifications {
 
 	@FindBy(xpath = "//input[@type=\"email\"]")
 	WebElement email;
@@ -17,7 +17,7 @@ public class SignInPage extends ProjectSpecifications {
 	@FindBy(xpath = "//button[@type=\"submit\"]")
 	WebElement signinButton;
 	
-	public SignInPage() {
+	public LogInPage() {
 		PageFactory.initElements(driver, this);
 	}
 	

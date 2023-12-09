@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import base.ProjectSpecifications;
 import pages.HomePage;
-import pages.SignInPage;
+import pages.LogInPage;
 import utils.UtilClass;
 
 public class TC03_CheckingBrokenLinks extends ProjectSpecifications {

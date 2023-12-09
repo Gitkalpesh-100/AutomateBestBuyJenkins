@@ -14,12 +14,13 @@ import com.beust.jcommander.Parameter;
 import utils.UtilClass;
 
 public class ProjectSpecifications extends UtilClass {
-
-	@BeforeMethod
 	
-	public void launchBrowser() {
+	@Parameters("browser")
+	@BeforeMethod
+	public void launchBrowser(String browser_option ) {
+    System.out.println("Paramater ="+browser_option);
 		
-		launch("Chrome");
+		launch(browser_option);
 
 		url("https://www.bestbuy.com");
 	}
@@ -29,7 +30,15 @@ public class ProjectSpecifications extends UtilClass {
 		String[][] data = readExcel(sheetName);
 		return data;	
 	}
-
+	
+	/*
+	@DataProvider(name = "getInputData_2")
+	public String[][] getInputData_2() throws IOException {
+		String[][] data = new String[][]{{"Test","Test123"}};
+		return data;	
+	}
+*/
+	
 	@AfterMethod
 	public void closeBrowser() {
 		driver.close();

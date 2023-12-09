@@ -15,6 +15,7 @@ import base.ProjectSpecifications;
 public class Listeners extends ProjectSpecifications implements ITestListener {
 
 	
+
 	ExtentTest test;
 	
 	ExtentReports extent = ExtentReportClass.getReport();
@@ -50,6 +51,7 @@ public class Listeners extends ProjectSpecifications implements ITestListener {
     		
     		filepath = CaptureScreen(result.getMethod().getMethodName());
 			
+    		
 		} catch (Exception e) {
             e.printStackTrace();
            

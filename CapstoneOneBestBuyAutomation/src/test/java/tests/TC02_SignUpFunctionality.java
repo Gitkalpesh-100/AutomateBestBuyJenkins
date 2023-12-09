@@ -10,7 +10,7 @@ import org.testng.internal.Utils;
 import base.ProjectSpecifications;
 import net.bytebuddy.build.Plugin.Factory.UsingReflection.Priority;
 import pages.HomePage;
-import pages.SignInPage;
+import pages.LogInPage;
 import pages.SignUpPage;
 import utils.UtilClass;
 

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">TestCase Reporter</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 7, 2023 08:08:39 am</span></a>
+<a href="#"><span class="badge badge-primary">Dec 9, 2023 06:05:02 pm</span></a>
 </li>
 </ul>
 </div>
@@ -84,9 +84,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">SignInTest</p>
+            <p class="name">LoginTest</p>
             <p class="text-sm">
-              <span>8:08:40 am</span> / <span>00:00:00:008</span>
+              <span>6:05:04 pm</span> / <span>00:00:00:005</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -94,10 +94,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">SignInTest</h5>
-<span class='badge badge-success'>12.07.2023 8:08:40 am</span>
-<span class='badge badge-danger'>12.07.2023 8:08:40 am</span>
-<span class='badge badge-default'>00:00:00:008</span>
+<h5 class="test-status text-fail">LoginTest</h5>
+<span class='badge badge-success'>12.09.2023 6:05:04 pm</span>
+<span class='badge badge-danger'>12.09.2023 6:05:04 pm</span>
+<span class='badge badge-default'>00:00:00:005</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -110,9 +110,9 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>8:08:40 am</td>
+        <td>6:05:04 pm</td>
         <td>
-          <textarea readonly class="code-block">java.lang.RuntimeException: org.apache.poi.openxml4j.exceptions.InvalidOperationException: Can't open the specified file input stream from file: '.\data\data\excelfile.xlsx.xlsx'
+          <textarea readonly class="code-block">java.lang.RuntimeException: java.io.FileNotFoundException: C:\Users\Kalpesh Patil\git\repository5\CapstoneOneBestBuyAutomation\.\data\CommonData.xlsx (The process cannot access the file because it is being used by another process)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:803)
@@ -139,33 +139,24 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.apache.poi.openxml4j.exceptions.InvalidOperationException: Can't open the specified file input stream from file: '.\data\data\excelfile.xlsx.xlsx'
-	at org.apache.poi.openxml4j.opc.ZipPackage.openZipEntrySourceStream(ZipPackage.java:188)
-	at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:175)
-	at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:149)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:247)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:178)
-	at org.apache.poi.ooxml.POIXMLDocument.openPackage(POIXMLDocument.java:88)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:333)
-	at utils.UtilClass.readExcel(UtilClass.java:379)
-	at base.ProjectSpecifications.getInputData(ProjectSpecifications.java:25)
+Caused by: java.io.FileNotFoundException: C:\Users\Kalpesh Patil\git\repository5\CapstoneOneBestBuyAutomation\.\data\CommonData.xlsx (The process cannot access the file because it is being used by another process)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+	at org.apache.poi.openxml4j.opc.internal.FileHelper.copyFile(FileHelper.java:65)
+	at org.apache.poi.openxml4j.opc.ZipPackage.closeImpl(ZipPackage.java:488)
+	at org.apache.poi.openxml4j.opc.OPCPackage.close(OPCPackage.java:470)
+	at org.apache.poi.ooxml.POIXMLDocument.close(POIXMLDocument.java:189)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.close(XSSFWorkbook.java:617)
+	at utils.UtilClass.readExcel(UtilClass.java:395)
+	at base.ProjectSpecifications.getInputData(ProjectSpecifications.java:30)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
 	... 25 more
-Caused by: java.nio.file.NoSuchFileException: .\data\data\excelfile.xlsx.xlsx
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
-	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
-	at java.base/java.nio.file.Files.newInputStream(Files.java:159)
-	at org.apache.poi.openxml4j.opc.ZipPackage.openZipEntrySourceStream(ZipPackage.java:185)
-	... 38 more
 </textarea>
           
         </td>
@@ -216,9 +207,9 @@ Caused by: java.nio.file.NoSuchFileException: .\data\data\excelfile.xlsx.xlsx
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>08:08:40 am</td>
+<td>18:05:04 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>SignInTest</a>
+<a href="#" class="linked" test-id='1' id='1'>LoginTest</a>
 </td>
 </tr>
 </tbody>
@@ -238,13 +229,13 @@ Caused by: java.nio.file.NoSuchFileException: .\data\data\excelfile.xlsx.xlsx
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 7, 2023 08:08:39 am</h3>
+<h3>Dec 9, 2023 06:05:02 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 7, 2023 08:08:40 am</h3>
+<h3>Dec 9, 2023 06:05:04 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -314,7 +305,7 @@ Caused by: java.nio.file.NoSuchFileException: .\data\data\excelfile.xlsx.xlsx
 </div></div>
 <script>
 var timeline = {
-"SignInTest":0.008
+"LoginTest":0.005
 };
 </script>
 <div class="row">

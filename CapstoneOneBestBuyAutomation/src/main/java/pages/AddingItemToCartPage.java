@@ -40,10 +40,10 @@ public class AddingItemToCartPage extends ProjectSpecifications {
 	@FindBy (xpath = "//div[@class='flex-copy-wrapper']/a[@href='/site/refrigerators/french-door-refrigerators/abcat0901004.c?id=abcat0901004']")
 	WebElement frenchdoorrefrigerators;
 	
-	@FindBy (xpath = "(//a[@href='/site/lg-25-5-cu-ft-french-door-counter-depth-smart-refrigerator-with-instaview-stainless-steel/6511565.p?skuId=6511565'])[2]")
+	@FindBy (xpath = "(//a[@href='/site/lg-29-cu-ft-french-door-smart-refrigerator-with-external-water-dispenser-stainless-steel/6447111.p?skuId=6447111'])[2]")
 	WebElement product2;
 	
-	@FindBy (xpath = "//button[@data-sku-id='6511565' and contains(text(), 'Add to Cart')]")
+	@FindBy (xpath = "//button[@data-sku-id='6447111' and contains(text(), 'Add to Cart')]")
 	WebElement addToCartButton1;
 	
 	@FindBy (xpath = "//div[@class = 'go-to-cart-button']")
@@ -66,10 +66,10 @@ public class AddingItemToCartPage extends ProjectSpecifications {
 	@FindBy (xpath = "//a[contains(text(), 'TVs') and (@class = 'link-element')]")
 	WebElement tvs;
 	
-	@FindBy (xpath = "(//a[@href='/site/samsung-50-class-tu690t-series-led-4k-uhd-smart-tizen-tv/6514055.p?skuId=6514055'])[2]")
+	@FindBy (xpath = "(//a[@href='/site/samsung-75-class-tu690t-crystal-uhd-4k-smart-tizen-tv/6514052.p?skuId=6514052'])[2]")
 	WebElement product3;
 	
-	@FindBy (xpath = "//*[@data-sku-id = '6514055' and contains(text(), 'Add to Cart')]")
+	@FindBy (xpath = "//*[@data-sku-id = '6514052' and contains(text(), 'Add to Cart')]")
 	WebElement addToCartButton2;
 	
 	@FindBy (xpath = "//div[@class = 'go-to-cart-button']")
@@ -129,14 +129,15 @@ public class AddingItemToCartPage extends ProjectSpecifications {
     public void product2()
     {
     	JavascriptExecutor jsExecutor = ((JavascriptExecutor) driver);
-		jsExecutor.executeScript("window.scrollTo(0,120)", addToCartButton1.getLocation().x, addToCartButton1.getLocation().y);
+		jsExecutor.executeScript("window.scrollTo(0,125)", product2.getLocation().x, product2.getLocation().y);
 		click(product2);
     }
     
     
     public void addToCartButton1() throws IOException {
     	JavascriptExecutor jsExecutor = ((JavascriptExecutor) driver);
-		jsExecutor.executeScript("window.scrollTo(0,500)", addToCartButton1.getLocation().x, addToCartButton1.getLocation().y);
+		//jsExecutor.executeScript("window.scrollTo(0,500)", addToCartButton1.getLocation().x, addToCartButton1.getLocation().y);
+    	 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addToCartButton1);
 		addToCartButton1.click();
 		
 		CaptureScreen("AddToCartButton1");

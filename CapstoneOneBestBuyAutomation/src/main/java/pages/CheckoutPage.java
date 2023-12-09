@@ -28,10 +28,10 @@ public class CheckoutPage extends ProjectSpecifications {
 	@FindBy (xpath = "//a[contains(text(), 'TVs') and (@class = 'link-element')]")
 	WebElement tvs;
 	
-	@FindBy (xpath = "(//a[@href='/site/samsung-50-class-tu690t-series-led-4k-uhd-smart-tizen-tv/6514055.p?skuId=6514055'])[2]")
+	@FindBy (xpath = "(//a[@href='/site/samsung-50-class-cu7000-crystal-uhd-4k-smart-tizen-tv/6537418.p?skuId=6537418'])[1]")
 	WebElement product4;
 	
-	@FindBy (xpath = "//*[@data-sku-id = '6514055' and contains(text(), 'Add to Cart')]")
+	@FindBy (xpath = "//*[@data-sku-id = '6537418' and contains(text(), 'Add to Cart')]")
 	WebElement addToCartButton3;
 	
 	@FindBy (xpath = "//div[@class = 'go-to-cart-button']")
@@ -149,7 +149,8 @@ public class CheckoutPage extends ProjectSpecifications {
 	    
 	   public void addToCartButton3() {
 		    JavascriptExecutor jsExecutor = ((JavascriptExecutor) driver);
-			jsExecutor.executeScript("window.scrollTo(0,650)", addToCartButton3.getLocation().x, addToCartButton3.getLocation().y);
+			//jsExecutor.executeScript("window.scrollTo(0,650)", addToCartButton3.getLocation().x, addToCartButton3.getLocation().y);
+		    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addToCartButton3 );
 			click(addToCartButton3);
 	   }
 	    

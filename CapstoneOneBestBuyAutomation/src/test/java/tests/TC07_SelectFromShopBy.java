@@ -1,3 +1,5 @@
+//This code is commented because earlier purchasing of items was done in separate classes.
+
 /*package tests;
 
 import java.io.IOException;

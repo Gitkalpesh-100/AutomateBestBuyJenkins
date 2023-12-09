@@ -16,7 +16,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import base.ProjectSpecifications;
 import pages.HomePage;
-import pages.SignInPage;
+import pages.LogInPage;
 import pages.ValidateTitlePage;
 //import utils.DataSupplierClass;
 import utils.UtilClass;
@@ -39,7 +39,7 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 		home.clickAccount();
 		home.clickSignIn();
 		System.out.println(driver.getTitle());	
-		SignInPage signin = new SignInPage();
+		LogInPage signin = new LogInPage();
 		signin.emailAddress(userName);
 		signin.password(password);
 		try {
@@ -68,8 +68,8 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 		 */   
 	
 
-	@Test(priority = 2, dataProvider = "getInputData")
-	public void SignInNegativeTest(String userName, String password) throws IOException {
+	@Test(priority = 2, dataProvider = "getInputData_2")
+	public void LogInTestNegative(String userName, String password) throws IOException {
 	    HomePage home = new HomePage();
 	    home.chooseCountry();
 	    
@@ -79,7 +79,7 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 	    home.clickAccount();
 	    home.clickSignIn();
 	    System.out.println(driver.getTitle());
-	    SignInPage signin = new SignInPage();
+	    LogInPage signin = new LogInPage();
 	    signin.emailAddress("onetwothree");
 	    signin.password("");   
 	    try {
@@ -97,6 +97,7 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 	    Assert.assertTrue(signin.isSignInFailed(), "The Sign In should fail, but it passed.");
 	  
 	}
+	/*
 	@DataProvider(name = "loginTestData1")
 	public Object [] [] loginData()
 	{
@@ -107,5 +108,5 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 		data [1][1] = "Test123";	
 		return data;
 	}
-
+*/
 }

@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.v115.autofill.model.CreditCard;
 import org.openqa.selenium.remote.server.handler.ClickElement;
@@ -27,6 +28,9 @@ public class HomePage extends ProjectSpecifications {
 	
 	@FindBy (xpath = "//span[@class='header-search-icon']")
 	WebElement searchIcon;
+	
+	@FindBy (xpath = "")
+	WebElement crossMarkIcon;
 	
 	
 	/*
@@ -96,33 +100,10 @@ public class HomePage extends ProjectSpecifications {
 		click(CreateAccount);
 
 	}
-
-	
-	
-
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
 	
 	public void clickSignIn1() {
 		clickSignIn();
 	}
-	
-	
-	
-	
-
-	
-	
-	
 	
 	public void SearchBox() {
 		click(seacrhBox);
@@ -131,6 +112,11 @@ public class HomePage extends ProjectSpecifications {
 	
 	public void SearchBoxIcon() {
 		click(searchIcon);
+	}
+	
+	public void crossMarkIcon() {
+		((JavascriptExecutor) driver).executeScript("debugger;");
+		click(crossMarkIcon);
 	}
 
 	/*

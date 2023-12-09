@@ -44,7 +44,7 @@ public class UtilClass<HttpURLConnection> {
 
 	public static WebDriver driver;
 	 public String sheetName;
-
+	
 	public void launch(String browser) {
 
 		ChromeOptions options = new ChromeOptions();
@@ -57,13 +57,9 @@ public class UtilClass<HttpURLConnection> {
 
 		} else if (browser.equalsIgnoreCase("Chrome-Headless")) {
 
-			options.addArguments("headless");
-			
+			options.addArguments("--headless=new");		
 			driver = new ChromeDriver(options);
-		} else {
-			driver = new ChromeDriver();
-		}
-
+		} 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
@@ -212,6 +208,7 @@ public class UtilClass<HttpURLConnection> {
 	 * CaptureScreen("GoToCartButton1"); }
 	 */
 
+	/*
 	public void SelectFromBrands() throws InterruptedException, IOException {
 
 		WebElement hamburgericon = driver
@@ -249,6 +246,8 @@ public class UtilClass<HttpURLConnection> {
 
 		CaptureScreen("GoToCart");
 	}
+	*/
+	
 
 	/*
 	 * public void NavigateCheckoutAndDummyPayment() {
@@ -359,6 +358,7 @@ public class UtilClass<HttpURLConnection> {
 	 * }
 	 */
 
+	
 	public String CaptureScreen(String snap) throws IOException {
 
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

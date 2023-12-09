@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Dec 07 08:08:40 IST 2023</td>
+<td>Started on:</td><td>Sat Dec 09 18:05:03 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (228 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1169 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,33 +76,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.TC01_LoginFunctionality.SignInTest()'><b>SignInTest</b><br>Test class: tests.TC01_LoginFunctionality</td>
-<td><div><pre>java.lang.RuntimeException: org.apache.poi.openxml4j.exceptions.InvalidOperationException: Can&apos;t open the specified file input stream from file: &apos;.\data\data\excelfile.xlsx.xlsx&apos;
+<td title='tests.TC01_LoginFunctionality.LoginTest()'><b>LoginTest</b><br>Test class: tests.TC01_LoginFunctionality</td>
+<td><div><pre>java.lang.RuntimeException: java.io.FileNotFoundException: C:\Users\Kalpesh Patil\git\repository5\CapstoneOneBestBuyAutomation\.\data\CommonData.xlsx (The process cannot access the file because it is being used by another process)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.apache.poi.openxml4j.exceptions.InvalidOperationException: Can&apos;t open the specified file input stream from file: &apos;.\data\data\excelfile.xlsx.xlsx&apos;
-	at org.apache.poi.openxml4j.opc.ZipPackage.openZipEntrySourceStream(ZipPackage.java:188)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:175)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:149)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:247)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:178)
-	at org.apache.poi.ooxml.POIXMLDocument.openPackage(POIXMLDocument.java:88)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:333)
-	at utils.UtilClass.readExcel(UtilClass.java:379)
-	at base.ProjectSpecifications.getInputData(ProjectSpecifications.java:25)
+Caused by: java.io.FileNotFoundException: C:\Users\Kalpesh Patil\git\repository5\CapstoneOneBestBuyAutomation\.\data\CommonData.xlsx (The process cannot access the file because it is being used by another process)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:236)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:185)
+	at org.apache.poi.openxml4j.opc.internal.FileHelper.copyFile(FileHelper.java:65)
+	at org.apache.poi.openxml4j.opc.ZipPackage.closeImpl(ZipPackage.java:488)
+	at org.apache.poi.openxml4j.opc.OPCPackage.close(OPCPackage.java:470)
+	at org.apache.poi.ooxml.POIXMLDocument.close(POIXMLDocument.java:189)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.close(XSSFWorkbook.java:617)
+	at utils.UtilClass.readExcel(UtilClass.java:395)
+	at base.ProjectSpecifications.getInputData(ProjectSpecifications.java:30)
 	... 25 more
-Caused by: java.nio.file.NoSuchFileException: .\data\data\excelfile.xlsx.xlsx
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
-	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
-	at java.base/java.nio.file.Files.newInputStream(Files.java:159)
-	at org.apache.poi.openxml4j.opc.ZipPackage.openZipEntrySourceStream(ZipPackage.java:185)
-	... 38 more
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace778720569", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace778720569'><pre>java.lang.RuntimeException: org.apache.poi.openxml4j.exceptions.InvalidOperationException: Can&apos;t open the specified file input stream from file: &apos;.\data\data\excelfile.xlsx.xlsx&apos;
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1865617081", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1865617081'><pre>java.lang.RuntimeException: java.io.FileNotFoundException: C:\Users\Kalpesh Patil\git\repository5\CapstoneOneBestBuyAutomation\.\data\CommonData.xlsx (The process cannot access the file because it is being used by another process)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:803)
@@ -129,36 +120,27 @@ Caused by: java.nio.file.NoSuchFileException: .\data\data\excelfile.xlsx.xlsx
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.apache.poi.openxml4j.exceptions.InvalidOperationException: Can&apos;t open the specified file input stream from file: &apos;.\data\data\excelfile.xlsx.xlsx&apos;
-	at org.apache.poi.openxml4j.opc.ZipPackage.openZipEntrySourceStream(ZipPackage.java:188)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:175)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:149)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:247)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:178)
-	at org.apache.poi.ooxml.POIXMLDocument.openPackage(POIXMLDocument.java:88)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:333)
-	at utils.UtilClass.readExcel(UtilClass.java:379)
-	at base.ProjectSpecifications.getInputData(ProjectSpecifications.java:25)
+Caused by: java.io.FileNotFoundException: C:\Users\Kalpesh Patil\git\repository5\CapstoneOneBestBuyAutomation\.\data\CommonData.xlsx (The process cannot access the file because it is being used by another process)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:236)
+	at java.base/java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:185)
+	at org.apache.poi.openxml4j.opc.internal.FileHelper.copyFile(FileHelper.java:65)
+	at org.apache.poi.openxml4j.opc.ZipPackage.closeImpl(ZipPackage.java:488)
+	at org.apache.poi.openxml4j.opc.OPCPackage.close(OPCPackage.java:470)
+	at org.apache.poi.ooxml.POIXMLDocument.close(POIXMLDocument.java:189)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.close(XSSFWorkbook.java:617)
+	at utils.UtilClass.readExcel(UtilClass.java:395)
+	at base.ProjectSpecifications.getInputData(ProjectSpecifications.java:30)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
 	... 25 more
-Caused by: java.nio.file.NoSuchFileException: .\data\data\excelfile.xlsx.xlsx
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
-	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
-	at java.base/java.nio.file.Files.newInputStream(Files.java:159)
-	at org.apache.poi.openxml4j.opc.ZipPackage.openZipEntrySourceStream(ZipPackage.java:185)
-	... 38 more
 </pre></div></td>
 <td>0</td>
-<td>tests.TC01_LoginFunctionality@21d03963</td></tr>
+<td>tests.TC01_LoginFunctionality@471a9022</td></tr>
 </table><p>
 </body>
 </html>
