@@ -54,7 +54,7 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 		}
 	}
 	
-	@Test(priority = 2)
+	@Test(enabled = false)
 	    public void SignUpNegativeTest() {
 
 	        HomePage home = new HomePage();

@@ -16,7 +16,7 @@ import utils.UtilClass;
 public class TC06_AddingItemToCart extends ProjectSpecifications {
 
 	@Test (priority = 1)
-	public void AddingItemToCart() throws InterruptedException, IOException {
+	public void AddingItemToCart(String searchbox) throws InterruptedException, IOException {
 
 		HomePage home = new HomePage();
 		home.chooseCountry();

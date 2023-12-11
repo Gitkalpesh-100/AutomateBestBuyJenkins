@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.HeadlessChrome">
+      <class name="tests.TC01_LoginFunctionality">
         <methods>
-          <include name="Headless"/>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="LoginTest"/>
         </methods>
-      </class> <!-- tests.HeadlessChrome -->
+      </class> <!-- tests.TC01_LoginFunctionality -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

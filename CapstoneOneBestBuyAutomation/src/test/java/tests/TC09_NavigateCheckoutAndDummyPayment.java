@@ -13,7 +13,9 @@ import utils.UtilClass;
 public class TC09_NavigateCheckoutAndDummyPayment extends ProjectSpecifications {
 
 	@Test
-	public void NavigateCheckoutAndDummyPayment() throws IOException {
+	public void NavigateCheckoutAndDummyPayment(String firstName2, String lastName2, String address2, String city, 
+			String state, String zipcode, String useremailaddress, String userphonenumber,String creditcardordebitcardnumber,
+			String expirationmonth, String expirationyear, String securitycode) throws IOException {
 
 		HomePage home = new HomePage();
 		home.chooseCountry();

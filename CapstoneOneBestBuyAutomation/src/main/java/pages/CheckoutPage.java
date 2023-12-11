@@ -10,33 +10,30 @@ import base.ProjectSpecifications;
 
 public class CheckoutPage extends ProjectSpecifications {
 
-	
-	@FindBy (xpath = "//button[contains(@class, 'c-button-unstyled hamburger-menu-button')]")
+	@FindBy(xpath = "//button[contains(@class, 'c-button-unstyled hamburger-menu-button')]")
 	WebElement hamburgericon;
-	
-	@FindBy (xpath = "//*[contains(@class, 'c-button-unstyled top-four v-fw-medium') and contains(text(), 'Brands')]")
+
+	@FindBy(xpath = "//*[contains(@class, 'c-button-unstyled top-four v-fw-medium') and contains(text(), 'Brands')]")
 	WebElement brands;
-	
-	
-	@FindBy (xpath = "//a[contains(@class, 'hamburger-menu-flyout-list-item') and contains(text(), 'Samsung')]")
+
+	@FindBy(xpath = "//a[contains(@class, 'hamburger-menu-flyout-list-item') and contains(text(), 'Samsung')]")
 	WebElement samsung;
-	
-	@FindBy (xpath = "//a[contains(text(), 'TV & Home Theater')]")
+
+	@FindBy(xpath = "//a[contains(text(), 'TV & Home Theater')]")
 	WebElement tvandhometheater;
-	
-	
-	@FindBy (xpath = "//a[contains(text(), 'TVs') and (@class = 'link-element')]")
+
+	@FindBy(xpath = "//a[contains(text(), 'TVs') and (@class = 'link-element')]")
 	WebElement tvs;
-	
-	@FindBy (xpath = "(//a[@href='/site/samsung-50-class-cu7000-crystal-uhd-4k-smart-tizen-tv/6537418.p?skuId=6537418'])[1]")
+
+	@FindBy(xpath = "(//a[@href='/site/samsung-50-class-cu7000-crystal-uhd-4k-smart-tizen-tv/6537418.p?skuId=6537418'])[1]")
 	WebElement product4;
-	
-	@FindBy (xpath = "//*[@data-sku-id = '6537418' and contains(text(), 'Add to Cart')]")
+
+	@FindBy(xpath = "//*[@data-sku-id = '6537418' and contains(text(), 'Add to Cart')]")
 	WebElement addToCartButton3;
-	
-	@FindBy (xpath = "//div[@class = 'go-to-cart-button']")
+
+	@FindBy(xpath = "//div[@class = 'go-to-cart-button']")
 	WebElement goToCartButton3;
-	
+
 	@FindBy(xpath = "//button[@class='btn btn-lg btn-block btn-primary' and contains(text(), 'Checkout')]")
 	WebElement checkoutbutton;
 
@@ -114,49 +111,50 @@ public class CheckoutPage extends ProjectSpecifications {
 
 	@FindBy(xpath = "//span[text() = 'Place Your Order']")
 	WebElement placeyourorder;
-
+	
 	public CheckoutPage() {
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	public void hamburgericon() {
 		click(hamburgericon);
 	}
-	
-	 public void brands() {
-	    	click(brands);
-	    }
-	 
-	    
-	    public void samsung() {
-	    	click(samsung);
-	    }
-	    
-	    public void tvandhometheater() {
-	    	click(tvandhometheater);
-	    }
-	    
-	    public void tvs() {
-	    	click(tvs);
-	    }
-	    
-	    public void product4() {
-	    	JavascriptExecutor jsExecutor = ((JavascriptExecutor) driver);
-			//jsExecutor.executeScript("window.scrollTo(0,200)", product4.getLocation().x, product4.getLocation().y);
-	    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", product4 );
-			click(product4);
-	    }
-	    
-	   public void addToCartButton3() {
-		    JavascriptExecutor jsExecutor = ((JavascriptExecutor) driver);
-			//jsExecutor.executeScript("window.scrollTo(0,650)", addToCartButton3.getLocation().x, addToCartButton3.getLocation().y);
-		    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addToCartButton3 );
-			click(addToCartButton3);
-	   }
-	    
-	   public void goToCartButton3() {
-		   click(goToCartButton3);
-	   }
+
+	public void brands() {
+		click(brands);
+	}
+
+	public void samsung() {
+		click(samsung);
+	}
+
+	public void tvandhometheater() {
+		click(tvandhometheater);
+	}
+
+	public void tvs() {
+		click(tvs);
+	}
+
+	public void product4() {
+		JavascriptExecutor jsExecutor = ((JavascriptExecutor) driver);
+		// jsExecutor.executeScript("window.scrollTo(0,200)", product4.getLocation().x,
+		// product4.getLocation().y);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", product4);
+		click(product4);
+	}
+
+	public void addToCartButton3() {
+		JavascriptExecutor jsExecutor = ((JavascriptExecutor) driver);
+		// jsExecutor.executeScript("window.scrollTo(0,650)",
+		// addToCartButton3.getLocation().x, addToCartButton3.getLocation().y);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addToCartButton3);
+		click(addToCartButton3);
+	}
+
+	public void goToCartButton3() {
+		click(goToCartButton3);
+	}
 
 	public void CheckoutButton() {
 		click(checkoutbutton);
@@ -270,7 +268,7 @@ public class CheckoutPage extends ProjectSpecifications {
 	public void securitycode(String securitycodevalue) {
 		sendKeys(securitycode, securitycodevalue);
 	}
-
+	
 	public void placeyourorder() {
 		click(placeyourorder);
 	}

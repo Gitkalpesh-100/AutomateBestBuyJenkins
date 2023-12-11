@@ -49,14 +49,14 @@ public class Listeners extends ProjectSpecifications implements ITestListener {
     	
     	try {
     		
-    		filepath = CaptureScreen(result.getMethod().getMethodName());
+    	//	filepath = CaptureScreen(result.getMethod().getMethodName());
 			
     		
 		} catch (Exception e) {
             e.printStackTrace();
            
 		}
-    	test.addScreenCaptureFromPath(filepath, result.getMethod().getMethodName());
+    //	test.addScreenCaptureFromPath(filepath, result.getMethod().getMethodName());
     }
 
 	
