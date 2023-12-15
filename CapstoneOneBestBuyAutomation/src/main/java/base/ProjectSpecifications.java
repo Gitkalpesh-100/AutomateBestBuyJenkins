@@ -16,11 +16,11 @@ import utils.UtilClass;
 
 public class ProjectSpecifications extends UtilClass {
 	
-	@Parameters({"browser","url"})
+	@Parameters("browser")
 	@BeforeMethod
 	public void launchBrowser(String browser) {
     
-		launchBrowser(browser);
+		BrowserLaunch(browser);
 
 		url("https://www.bestbuy.com");
 	}

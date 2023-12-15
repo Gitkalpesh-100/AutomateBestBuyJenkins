@@ -31,12 +31,13 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 	}
 	
 	@Test(priority = 1, dataProvider = "getInputData")
-	public void LoginTest(String userName, String password) throws IOException {
+	public void LoginTest(String userName, String password) throws IOException, InterruptedException {
 		HomePage home = new HomePage();
 		home.chooseCountry(); 
 		
 		ValidateTitlePage vt = new ValidateTitlePage();
 		//vt.SavedItems();
+		
 		home.clickAccount();
 		home.clickSignIn();
 		System.out.println(driver.getTitle());	
@@ -70,13 +71,13 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 	
 
 	@Test(priority = 2, dataProvider = "getInputData_2")
-	public void LogInTestNegative(String userName, String password) throws IOException {
+	public void LogInTestNegative(String userName, String password) throws IOException, InterruptedException {
 	    HomePage home = new HomePage();
 	    home.chooseCountry();
 	    
 	    ValidateTitlePage vt = new ValidateTitlePage();
 	  //  vt.SavedItems();
-	    
+	  
 	    home.clickAccount();
 	    home.clickSignIn();
 	    System.out.println(driver.getTitle());
@@ -111,3 +112,4 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 	}
 */
 }
+

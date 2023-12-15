@@ -22,7 +22,7 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 	}
 	
 	@Test(priority = 1, dataProvider = "getInputData")
-	public void SignUpTest(String firstName, String lastName, String password, String confirmPassword, String mobilePhoneNumber) {
+	public void SignUpTest(String firstName, String lastName, String password, String confirmPassword, String mobilePhoneNumber) throws InterruptedException {
 		
 		HomePage home = new HomePage();
 		home.chooseCountry();       
@@ -55,7 +55,7 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 	}
 	
 	@Test(enabled = false)
-	    public void SignUpNegativeTest() {
+	    public void SignUpNegativeTest() throws InterruptedException {
 
 	        HomePage home = new HomePage();
 	        home.chooseCountry();

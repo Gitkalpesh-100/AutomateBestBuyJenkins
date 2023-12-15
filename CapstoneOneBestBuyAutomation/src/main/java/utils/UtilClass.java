@@ -9,7 +9,7 @@ import java.time.Duration;
 import java.util.List;
 
 import javax.lang.model.element.Element;
-
+import javax.net.ssl.HttpsURLConnection;
 import javax.print.attribute.standard.Destination;
 
 import org.apache.commons.io.FileUtils;
@@ -28,7 +28,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -45,17 +45,20 @@ public class UtilClass{
 	public static WebDriver driver;
 	public String sheetName;
 
-	public void launchBrowser(String browser) {
+	public void BrowserLaunch(String browser) {
 
 		ChromeOptions options = new ChromeOptions();
 		if (browser.equalsIgnoreCase("Chrome")) {
 
 			driver = new ChromeDriver();
+		} else if (browser.equalsIgnoreCase("Firefox")) {
+
+			driver = new FirefoxDriver();
+
 		} else if (browser.equalsIgnoreCase("Edge")) {
-
+		
 			driver = new EdgeDriver();
-
-		} else if (browser.equalsIgnoreCase("Chrome-Headless")) {
+		}else if (browser.equalsIgnoreCase("Chrome-Headless")) {
 
 			options.addArguments("--headless=new");
 			driver = new ChromeDriver(options);
@@ -85,17 +88,18 @@ public class UtilClass{
 	public void closeBrowser() {
 		driver.close();
 	}
-/*
+
 	public void CheckBrokenLink(String urlToCheck) {
 
 		{
 			try {
+			    
 			    URL url = new URL(urlToCheck);
-			//	HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-				((java.net.HttpURLConnection) connection).setRequestMethod("GET");
-			//	((URLConnection) connection).connect();
-
-				int statusCode = ((java.net.HttpURLConnection) connection).getResponseCode();
+			    HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+			    connection.setConnectTimeout(3000);
+			    connection.connect();
+			    int statusCode =  connection.getResponseCode();
+			   
 
 				if (statusCode == 200) {
 					System.out.println("Link is valid: " + urlToCheck);
@@ -107,7 +111,7 @@ public class UtilClass{
 			}
 		}
 	}
-*/
+
 	public void validateTitle(String expected_title) {
 
 		String my_title = driver.getTitle();

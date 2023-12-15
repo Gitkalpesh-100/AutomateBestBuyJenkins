@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import base.ProjectSpecifications;
 import pages.HomePage;
 import pages.ValidateTitlePage;
-import stepdefinitions.BestBuySignUpAndLogin;
 import utils.UtilClass;
 
 public class TC04_ValidateTitle extends ProjectSpecifications {

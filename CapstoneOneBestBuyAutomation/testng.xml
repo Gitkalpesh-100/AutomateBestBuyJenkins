@@ -9,10 +9,11 @@
 
 	<test name="Test1">
 	<parameter name="browser" value="Chrome" />
-	<parameter name="url" value="https://www.bestbuy.com" />
+	
 
 		<classes>
-			<class name="tests.TC01_LoginFunctionality" />
+			<class name="tests.TC10_HeadlessChrome"/>
+			<class name="tests.TC03_CheckingBrokenLinks"/>
 		</classes>
 
 	</test>

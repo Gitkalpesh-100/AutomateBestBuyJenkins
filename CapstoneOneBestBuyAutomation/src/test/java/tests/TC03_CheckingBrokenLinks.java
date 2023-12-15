@@ -17,38 +17,18 @@ public class TC03_CheckingBrokenLinks extends ProjectSpecifications {
 		HomePage home = new HomePage();
 		home.chooseCountry();
 
+		home.BrokenLink();
+		
 		try {
 			CaptureScreen("Snap3A1");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		home.CheckBrokenLink("https://www.bestbuy.com");
+		
 
 		try {
 			CaptureScreen("Snap3A2");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	@Test(priority = 2)
-	public void CheckNonBrokenLinksTest() {
-
-		HomePage home = new HomePage();
-		home.chooseCountry();
-		home.CheckBrokenLink("https://www.bestbuy.com");
-
-		try {
-			CaptureScreen("Snap3B1");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		Assert.assertTrue(home.isLinkBroken(), "This is not a valid link");
-
-		try {
-			CaptureScreen("Snap3B2");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

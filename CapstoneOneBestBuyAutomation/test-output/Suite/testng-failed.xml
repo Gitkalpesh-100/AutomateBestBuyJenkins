@@ -6,17 +6,14 @@
   </listeners>
   <test thread-count="3" name="Test1(failed)">
     <parameter name="browser" value="Chrome"/>
-    <parameter name="url" value="https://www.bestbuy.com"/>
     <classes>
-      <class name="tests.TC01_LoginFunctionality">
+      <class name="tests.TC10_HeadlessChrome">
         <methods>
-          <include name="LogInTestNegative"/>
           <include name="launchBrowser"/>
           <include name="closeBrowser"/>
-          <include name="setup"/>
-          <include name="LoginTest"/>
+          <include name="HeadlessChrome"/>
         </methods>
-      </class> <!-- tests.TC01_LoginFunctionality -->
+      </class> <!-- tests.TC10_HeadlessChrome -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->
