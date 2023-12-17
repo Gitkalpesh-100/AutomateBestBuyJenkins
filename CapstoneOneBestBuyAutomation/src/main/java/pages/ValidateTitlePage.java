@@ -1,5 +1,6 @@
 package pages;
 
+import org.bouncycastle.pkix.SubjectPublicKeyInfoChecker;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -14,21 +15,23 @@ public class ValidateTitlePage extends ProjectSpecifications{
 	@FindBy(xpath = "//a[text()='Deal of the Day']")
 	WebElement DealoftheDay;
 	
-	@FindBy(xpath = "//a[text()='My Best Buy Memberships']")
+	@FindBy(xpath = "(//a[text()='My Best Buy Memberships'])[2]")
 	WebElement MyBestBuyMemberships;
 
-	@FindBy(xpath = "//a[@data-lid='hdr_gift_cards' and contains(@class, 'utility-menu-flyout-list-item')]")
+	@FindBy(xpath = "(//a[text()='Credit Cards'])[2]")
 	WebElement creditCards;
 	
-	@FindBy(xpath = "//span[contains(text(), 'More')]")
+	@FindBy(xpath = "//span[text()='More']")
 	WebElement more;
 	
-	@FindBy (xpath = "//a[contains(text(), 'Gift Cards') and contains(@class, 'utility-menu-flyout-list-item')]")
+	@FindBy (xpath = "(//a[text()='Gift Cards'])[1]")
 	WebElement giftCards;
 	
-	@FindBy (xpath = "/html/body/div[3]/div/div/div[1]/header/div[2]/nav/div/div/div/div/div[1]/ul/li[3]/a")
+	@FindBy (xpath = "//a[text()='Gift Ideas']")
 	WebElement GiftIdeas;
 	
+	@FindBy (xpath = "(//a[text()='Yes, Best Buy Sells That'])[2]")
+	WebElement yesBestBuySellsThat;
 	
 	@FindBy (xpath = "//a[contains(@class, 'utility-menu-flyout-list-item') and contains(text(), 'Donate to St. Jude')]")
 	WebElement donatetoStJude;
@@ -88,6 +91,10 @@ public class ValidateTitlePage extends ProjectSpecifications{
 	
 	public void clickCreditCards() {
 		click(creditCards);
+	}
+	
+	public void clickyesBestBuySellsThat() {
+		click(yesBestBuySellsThat);
 	}
 	
 	public void clickMore() {

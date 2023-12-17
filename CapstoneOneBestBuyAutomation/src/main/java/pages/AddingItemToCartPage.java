@@ -19,7 +19,7 @@ public class AddingItemToCartPage extends ProjectSpecifications {
 	@FindBy (xpath = "(//a[@href='/site/wd-my-passport-ultra-for-mac-2tb-external-usb-3-0-portable-hard-drive-silver/6290662.p?skuId=6290662'])[2]")
 	WebElement product1;
 	
-	@FindBy(xpath = "//*[@data-sku-id = '6290662' and contains(text(), 'Add to Cart')]")    //*[@data-sku-id = '6406513' and contains(text(), 'Add to Cart')]
+	@FindBy(xpath = "(//button[@data-sku-id='6290662'])[1]")  
 	WebElement addToCartButton;
 	
 	@FindBy (xpath = "//div[@class = 'go-to-cart-button']")
@@ -40,10 +40,10 @@ public class AddingItemToCartPage extends ProjectSpecifications {
 	@FindBy (xpath = "//div[@class='flex-copy-wrapper']/a[@href='/site/refrigerators/french-door-refrigerators/abcat0901004.c?id=abcat0901004']")
 	WebElement frenchdoorrefrigerators;
 	
-	@FindBy (xpath = "(//a[@href='/site/lg-29-cu-ft-french-door-smart-refrigerator-with-external-water-dispenser-stainless-steel/6447111.p?skuId=6447111'])[2]")
+	@FindBy (xpath = "(//a[@href='/site/samsung-32-cu-ft-3-door-french-door-smart-refrigerator-with-dual-auto-ice-maker-stainless-steel/6546219.p?skuId=6546219'])[2]")
 	WebElement product2;
 	
-	@FindBy (xpath = "//button[@data-sku-id='6447111' and contains(text(), 'Add to Cart')]")
+	@FindBy (xpath = "//button[@data-sku-id='6546219']")
 	WebElement addToCartButton1;
 	
 	@FindBy (xpath = "//div[@class = 'go-to-cart-button']")
@@ -66,10 +66,10 @@ public class AddingItemToCartPage extends ProjectSpecifications {
 	@FindBy (xpath = "//a[contains(text(), 'TVs') and (@class = 'link-element')]")
 	WebElement tvs;
 	
-	@FindBy (xpath = "(//a[@href='/site/samsung-75-class-tu690t-crystal-uhd-4k-smart-tizen-tv/6514052.p?skuId=6514052'])[2]")
+	@FindBy (xpath = "(//a[@href='/site/samsung-32-class-n5300-series-led-full-hd-smart-tizen-tv/6202106.p?skuId=6202106'])[1]")
 	WebElement product3;
 	
-	@FindBy (xpath = "//*[@data-sku-id = '6514052' and contains(text(), 'Add to Cart')]")
+	@FindBy (xpath = "(//button[@data-sku-id=6202106])[1]")
 	WebElement addToCartButton2;
 	
 	@FindBy (xpath = "//div[@class = 'go-to-cart-button']")
@@ -95,7 +95,8 @@ public class AddingItemToCartPage extends ProjectSpecifications {
 		product1.click();
 	}
 	
-		public void addtoCartButton()  {
+		public void addtoCartButton() throws InterruptedException  {
+			Thread.sleep(15000);
 		click(addToCartButton);
 		
 	}

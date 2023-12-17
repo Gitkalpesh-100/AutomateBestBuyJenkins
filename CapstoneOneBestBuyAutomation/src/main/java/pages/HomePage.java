@@ -32,9 +32,6 @@ public class HomePage extends ProjectSpecifications {
 	@FindBy (xpath = "")
 	WebElement crossMarkIcon;
 	
-	
-	
-	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -75,7 +72,6 @@ public class HomePage extends ProjectSpecifications {
 		click(crossMarkIcon);
 	}
 
-	
     public void BrokenLink() {
     	CheckBrokenLink("https://www.bestbuy.com");
     	
@@ -89,5 +85,4 @@ public class HomePage extends ProjectSpecifications {
 		
 		return false;
 	}
-
 }

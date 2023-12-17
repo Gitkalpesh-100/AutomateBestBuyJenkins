@@ -25,8 +25,6 @@ public class TC03_CheckingBrokenLinks extends ProjectSpecifications {
 			e.printStackTrace();
 		}
 
-		
-
 		try {
 			CaptureScreen("Snap3A2");
 		} catch (IOException e) {
@@ -34,14 +32,3 @@ public class TC03_CheckingBrokenLinks extends ProjectSpecifications {
 		}
 	}
 }
-
-
-/*
-<class name="tests.TC02_SignUpFunctionality"/>
-		
-			<class name="tests.TC03_CheckingBrokenLinks"/>
-		
-			<class name="tests.TC04_ValidateTitle"/>
-		
-			<class name="tests.TC05_ValidateBottomLinks"/>
-*/

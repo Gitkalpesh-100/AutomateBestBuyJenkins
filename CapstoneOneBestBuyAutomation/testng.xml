@@ -8,12 +8,11 @@
 
 
 	<test name="Test1">
-	<parameter name="browser" value="Chrome" />
-	
+		<parameter name="browser" value="Chrome" />
+
 
 		<classes>
-			<class name="tests.TC10_HeadlessChrome"/>
-			<class name="tests.TC03_CheckingBrokenLinks"/>
+			<class name="tests.TC06_AddingItemToCart"/>
 		</classes>
 
 	</test>
