@@ -1,14 +1,22 @@
 package pages;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bouncycastle.pkix.SubjectPublicKeyInfoChecker;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.github.dockerjava.api.command.PullImageCmd;
+
 import base.ProjectSpecifications;
 
 public class ValidateTitlePage extends ProjectSpecifications{
 
+	@FindBy(xpath = "//a[text() = 'Holiday Deals']")
+	WebElement HolidayDeals;
+	
 	@FindBy(xpath = "//a[text()='Top Deals']")
 	WebElement TopDeals;
 	
@@ -22,10 +30,10 @@ public class ValidateTitlePage extends ProjectSpecifications{
 	WebElement creditCards;
 	
 	@FindBy(xpath = "//span[text()='More']")
-	WebElement more;
+	WebElement More;
 	
 	@FindBy (xpath = "(//a[text()='Gift Cards'])[1]")
-	WebElement giftCards;
+	WebElement GiftCards;
 	
 	@FindBy (xpath = "//a[text()='Gift Ideas']")
 	WebElement GiftIdeas;
@@ -53,6 +61,9 @@ public class ValidateTitlePage extends ProjectSpecifications{
 	
 	@FindBy (xpath = "//a[contains(text(), 'Create Account') and (@class = 'c-button c-button-outline c-button-sm create-account-btn')]")
 	WebElement CreateAccount1;
+	
+	@FindBy (xpath = "//a[contains(text(), 'Sign In') and (@class = 'c-button c-button-secondary c-button-sm sign-in-btn')]")
+	WebElement SignIn1;
 
 	@FindBy(xpath = "//span[contains(text(), 'Recently Viewed')]")
 	WebElement RecentlyViewed;
@@ -76,6 +87,11 @@ public class ValidateTitlePage extends ProjectSpecifications{
 		PageFactory.initElements(driver, this);
 	}
 
+	public void clickHolidayDeals(String title1) {
+		click(HolidayDeals);
+		validateTitle(title1);
+		
+	}
 	
 	public void clickTopDeals() {
 		click(TopDeals);
@@ -98,12 +114,12 @@ public class ValidateTitlePage extends ProjectSpecifications{
 	}
 	
 	public void clickMore() {
-		click(more);
+		click(More);
 	}
 	
 
 	public void clickgiftCards() {
-		click(giftCards);
+		click(GiftCards);
 	}
 	
 	public void clickGiftIdeas() {
@@ -132,6 +148,10 @@ public class ValidateTitlePage extends ProjectSpecifications{
 	
 	public void clickCreateAccount1() {
 		click(CreateAccount1);
+	}
+	
+	public void clickSignIn1() {
+		click(SignIn1);
 	}
 	
 	public void clickReturntopreviouspage()
@@ -165,3 +185,6 @@ public class ValidateTitlePage extends ProjectSpecifications{
 	}
 	
 }
+
+	
+

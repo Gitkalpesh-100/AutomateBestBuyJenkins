@@ -23,7 +23,7 @@ public class TC06_AddingItemToCart extends ProjectSpecifications {
 		sheetName = "AddingItemToCart";//same name for the sheet in excel sheet
 	}
 
-	@Test (priority = 1, dataProvider = "getInputData")
+	@Test (dataProvider = "getInputData")
 	public void AddingItemToCart(String searchbox) throws InterruptedException, IOException {
 
 		HomePage home = new HomePage();
@@ -31,13 +31,11 @@ public class TC06_AddingItemToCart extends ProjectSpecifications {
 		
 		AddingItemToCartPage itc = new AddingItemToCartPage();
 		
-		/*
 		itc.searchBox();
 		itc.product1();
 		itc.addtoCartButton();
 		itc.goToCartButton();
 		CaptureScreen("Snap6A1");
-		*/
 		
 		itc.hamburgericon();
 		itc.appliances();
@@ -49,7 +47,8 @@ public class TC06_AddingItemToCart extends ProjectSpecifications {
 		itc.goToCartButton1();
 		itc.closeicon();
 		CaptureScreen("Snap6A2");
-			
+		
+		
 		itc.hamburgericon();
 		itc.brands();
 		itc.samsung();
@@ -59,5 +58,7 @@ public class TC06_AddingItemToCart extends ProjectSpecifications {
 		itc.addToCartButton2();
 		itc.goToCartButton2();
 		CaptureScreen("Snap6A3");	
+		
+		
 	}
 }

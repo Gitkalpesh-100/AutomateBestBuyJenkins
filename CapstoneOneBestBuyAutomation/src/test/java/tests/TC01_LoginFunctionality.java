@@ -1,4 +1,4 @@
-package tests;
+ package tests;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -30,12 +30,12 @@ public class TC01_LoginFunctionality extends ProjectSpecifications {
 		sheetName = "LoginTest";//same name for the sheet in excel sheet
 	}
 	
-	@Test(priority = 1, dataProvider = "getInputData")
+	@Test(dataProvider = "getInputData")
 	public void LoginTest(String userName, String password) throws IOException, InterruptedException {
 		HomePage home = new HomePage();
 		home.chooseCountry(); 
 		
-		ValidateTitlePage vt = new ValidateTitlePage();
+		//ValidateTitlePage vt = new ValidateTitlePage();
 	
 		home.clickAccount();
 		home.clickSignIn();

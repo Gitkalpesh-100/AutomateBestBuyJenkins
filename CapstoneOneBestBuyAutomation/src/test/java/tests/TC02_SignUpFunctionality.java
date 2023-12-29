@@ -21,8 +21,8 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 		sheetName = "SignUpTest";//same name for the sheet in excel sheet
 	}
 	
-	@Test(priority = 1, dataProvider = "getInputData")
-	public void SignUpTest(String firstName, String lastName, String password, String confirmPassword, String mobilePhoneNumber) throws InterruptedException {
+	@Test(dataProvider = "getInputData")
+	public void SignUpTest(String firstName, String lastName, String emailAddress, String password, String confirmPassword, String mobilePhoneNumber) throws InterruptedException {
 		
 		HomePage home = new HomePage();
 		home.chooseCountry();       
@@ -32,6 +32,7 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 		SignUpPage signup = new SignUpPage();
 		signup.firstName(firstName);
 		signup.lastName(lastName);
+		signup.emailAddress(emailAddress);
 		signup.password(password);
 		signup.confirmPassword(confirmPassword);
 		signup.mobilePhoneNumber(mobilePhoneNumber);
@@ -40,7 +41,7 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 		System.out.println("");
 		
 		try {
-		    CaptureScreen("Snap2A1");
+		    CaptureScreen("SignUp1");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
@@ -48,42 +49,9 @@ public class TC02_SignUpFunctionality extends ProjectSpecifications {
 		signup.createAnAccountButton();	
 		
 		try {
-		     CaptureScreen("Snap2A2");
+		     CaptureScreen("SignUp2");
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
 	}
-	
-	@Test(enabled = false)
-	    public void SignUpNegativeTest() throws InterruptedException {
-
-	        HomePage home = new HomePage();
-	        home.chooseCountry();
-	        home.clickAccount();
-	        home.clickCreateAccount();
-
-	        SignUpPage signup = new SignUpPage();
-	        
-	        signup.firstName(""); 
-	        signup.lastName(""); 
-	        signup.password("First@1"); 
-	        signup.confirmPassword("First@2"); //Pswd not matching
-	        signup.mobilePhoneNumber("123"); //Incomplete phone number                  
-
-	        try {
-			    CaptureScreen("Snap2B1");
-			} catch (IOException e) {
-			    e.printStackTrace();
-			}
-	        
-	        signup.createAnAccountButton();
-	        
-	        try {
-			    CaptureScreen("Sanp2B2");
-			} catch (IOException e) {
-			    e.printStackTrace();
-			}
-	        Assert.assertTrue(signup.isSignUpFailed(), "The Sign In should fail, but it passed.");
-	 }
-	
 }

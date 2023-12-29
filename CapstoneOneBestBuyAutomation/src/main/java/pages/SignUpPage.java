@@ -14,7 +14,7 @@ public class SignUpPage extends ProjectSpecifications {
 	@FindBy(xpath = "//input[@id=\"lastName\"]")
 	WebElement lastName;
 
-	@FindBy(xpath = "//input[@id=\"email\"]")
+	@FindBy(xpath = "//input[@id='email']")
 	WebElement emailAddress;
 
 	@FindBy(xpath = "//input[@id=\"fld-p1\"]")
@@ -43,6 +43,10 @@ public class SignUpPage extends ProjectSpecifications {
 		sendKeys(lastName, lastNamevalue);
 	}
 
+	public void emailAddress(String emailAddressvalue) {
+		sendKeys(emailAddress, emailAddressvalue);
+	}
+	
 	public void password(String passwordvalue) {
 
 		sendKeys(password, passwordvalue);

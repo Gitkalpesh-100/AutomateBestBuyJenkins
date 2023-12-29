@@ -1,5 +1,8 @@
 package pages;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -85,6 +88,18 @@ public class ValidataBottomLinksPage extends ProjectSpecifications{
 		click(CASupplyChainTransparencyAct);
 	}	
 
-
-	
+	public List<WebElement> getbottomlinkname() {
+		List<WebElement> list=new ArrayList<WebElement>();
+		list.add(accessibility);
+		list.add(TermsandConditions);
+		list.add(Privacy);
+		list.add(InterestBasedAds);
+		list.add(StatePrivacyRights);
+	    list.add(HealthDataPrivacy);
+	    list.add(DoNotSellOrShareMyPersonalInformation);
+	    list.add(LimitUseofMySensitivePersonalInformation);
+	    list.add(TargetedAdvertisingOptOut);
+	    list.add(CASupplyChainTransparencyAct);
+		return list  ;
+	}
 }
