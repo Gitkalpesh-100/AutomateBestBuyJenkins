@@ -48,58 +48,54 @@ public class ValidataBottomLinksPage extends ProjectSpecifications{
 	}
 
 	
-	public void Accessibility() {
+	public void clickaccessibility(String Title1) {
 		click(accessibility);
+		validateTitle(Title1);
 	}
 	
-	public void TermsandConditons() {
+	public void clickTermsandConditons(String Title3) {
 		click(TermsandConditions);
+		validateTitle(Title3);
 	}
 	
-	public void Privacy() {
+	public void clickPrivacy(String Title5) {
 		click(Privacy);
+		validateTitle(Title5);
 	}
 	
-	public void InterestBasedAds() {
+	public void clickInterestBasedAds(String Title7) {
 		click(InterestBasedAds);
+		validateTitle(Title7);
 	}
 
-	public void StatePrivacyRights() {
+	public void clickStatePrivacyRights(String Title9) {
 		click(StatePrivacyRights);
+		validateTitle(Title9);
 	}
 	
-	public void HealthDataPrivacy() {
+	public void clickHealthDataPrivacy(String Title11) {
 		click(HealthDataPrivacy);
+		validateTitle(Title11);
 	}
 	
-	public void DoNotSellOrShareMyPersonalInformation() {
+	public void clickDoNotSellOrShareMyPersonalInformation(String Title13) {
 		click(DoNotSellOrShareMyPersonalInformation);
+		validateTitle(Title13);
 	}
 	
-	public void LimitUseOfMySensitivePersonalInformation() {
+	public void clickLimitUseOfMySensitivePersonalInformation(String Title15) {
 		click(LimitUseofMySensitivePersonalInformation);
+		validateTitle(Title15);
 	}
 	
-	public void TargetedAdvertisingOptOut() {
+	public void clickTargetedAdvertisingOptOut(String Title17) {
 		click(TargetedAdvertisingOptOut);
+		validateTitle(Title17);
 	}
 	
-	public void CASupplyChainTransparencyAct() {
+	public void clickCASupplyChainTransparencyAct(String Title19) {
 		click(CASupplyChainTransparencyAct);
+		validateTitle(Title19);
 	}	
 
-	public List<WebElement> getbottomlinkname() {
-		List<WebElement> list=new ArrayList<WebElement>();
-		list.add(accessibility);
-		list.add(TermsandConditions);
-		list.add(Privacy);
-		list.add(InterestBasedAds);
-		list.add(StatePrivacyRights);
-	    list.add(HealthDataPrivacy);
-	    list.add(DoNotSellOrShareMyPersonalInformation);
-	    list.add(LimitUseofMySensitivePersonalInformation);
-	    list.add(TargetedAdvertisingOptOut);
-	    list.add(CASupplyChainTransparencyAct);
-		return list  ;
-	}
 }

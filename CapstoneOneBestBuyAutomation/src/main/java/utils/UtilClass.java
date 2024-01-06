@@ -111,27 +111,19 @@ public class UtilClass {
 		}
 	}
 
-	
 	public void validateTitle(String expected_title) {
-	    try {
-	        String my_title = driver.getTitle();
-	        
-	        System.out.println("Title is: " + my_title);
+		try {
+			String my_title = driver.getTitle();
 
-	        if (my_title.equals(expected_title)) {
-	            System.out.println("Title validation passed!");
-	        } else {
-	            System.out.println("Title validation failed. Expected title: " + expected_title);
-	            
-	            throw new AssertionError("Title validation failed. Expected title: " + expected_title);
-	        }
-	    } catch (AssertionError e) {
-	       
-	        System.out.println("Caught AssertionError: " + e.getMessage());
-	        
-	    }
+			System.out.println("Title is: " + my_title);
+
+			Assert.assertEquals(my_title, expected_title);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
 	}
-
 
 	public void bottomLinks() {
 
@@ -152,21 +144,31 @@ public class UtilClass {
 
 		Assert.assertEquals(my_title, expected_title);
 	}
+	
+	
+	
 
 	public String CaptureScreen(String snap) throws IOException {
+		String absolutepath_screen = "";
+		try {
+			File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		
-		File destinationfile = new File("src/screenshots/" + snap + System.currentTimeMillis() + ".png");
-		
-		String absolutepath_screen = destinationfile.getAbsolutePath();
+			File destinationfile = new File("src/screenshots/" + snap + System.currentTimeMillis() + ".png");
 
-		FileUtils.copyFile(srcFile, destinationfile);
+			absolutepath_screen = destinationfile.getAbsolutePath();
 
-		System.out.println("Screenshot captured at: " + absolutepath_screen);
+			FileUtils.copyFile(srcFile, destinationfile);
 
+			System.out.println("Screenshot captured at: " + absolutepath_screen);
+
+		} catch (Exception e) {
+			
+		}
 		return absolutepath_screen;
 	}
+	
+	
+	
 
 	public void scroll() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -205,3 +207,15 @@ public class UtilClass {
 		return data;
 	}
 }
+
+/*
+ * if (my_title.equals(expected_title)) {
+ * System.out.println("Title validation passed!"); } else {
+ * System.out.println("Title validation failed. Expected title: " +
+ * expected_title);
+ * 
+ * throw new AssertionError("Title validation failed. Expected title: " +
+ * expected_title); } } catch (AssertionError e) {
+ * 
+ * System.out.println("Caught AssertionError: " + e.getMessage());
+ */

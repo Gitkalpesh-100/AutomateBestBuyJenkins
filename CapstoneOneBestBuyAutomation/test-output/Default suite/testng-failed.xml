@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TC07_NavigateCheckoutAndDummyPayment">
+      <class name="tests.TC04_ValidateTitle">
         <methods>
+          <include name="validatetitle"/>
           <include name="launchBrowser"/>
           <include name="closeBrowser"/>
-          <include name="NavigateCheckoutAndDummyPayment"/>
-          <include name="setup"/>
         </methods>
-      </class> <!-- tests.TC07_NavigateCheckoutAndDummyPayment -->
+      </class> <!-- tests.TC04_ValidateTitle -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
