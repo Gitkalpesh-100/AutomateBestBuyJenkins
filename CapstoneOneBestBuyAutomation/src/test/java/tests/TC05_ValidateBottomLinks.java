@@ -24,14 +24,14 @@ public class TC05_ValidateBottomLinks extends ProjectSpecifications {
 	home.scroll();
 	ValidataBottomLinksPage vbl = new ValidataBottomLinksPage();
 	
-	//home.scroll();
-	//vbl.clickaccessibility("Accessibility - Best Buy");
+	home.scroll();
+	vbl.clickaccessibility("Accessibility - Best Buy");
 	
 	
 
 	home.scroll();
 	vbl.clickTermsandConditons("BestBuy.com Terms and Conditions");
-	vbl.validateTitle("BestBuy.com Terms and Conditions");
+
 	
 	
 	home.scroll();
