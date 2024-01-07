@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.TC04_ValidateTitle" class="method navigator-link" hash-for-method="validatetitle">validatetitle</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.TC05_ValidateBottomLinks" class="method navigator-link" hash-for-method="ValidateBottomLinks">ValidateBottomLinks</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -121,18 +121,17 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">tests.TC04_ValidateTitle</span>
+              <span class="class-name">tests.TC05_ValidateBottomLinks</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validatetitle">
-                  </a> <!-- validatetitle -->
-                  <span class="method-name">validatetitle</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Yes, Best Buy Sells That - Best Buy] but found [Yes, Best Buy Sells That – Best Buy]
+                  <a name="ValidateBottomLinks">
+                  </a> <!-- ValidateBottomLinks -->
+                  <span class="method-name">ValidateBottomLinks</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Privacy Policy Hub - Best Buy] but found [BestBuy.com Terms and Conditions]
 	at utils.UtilClass.validateTitle(UtilClass.java:120)
-	at pages.ValidateTitlePage.clickyesBestBuySellsThat(ValidateTitlePage.java:102)
-	at tests.TC04_ValidateTitle.validatetitle(TC04_ValidateTitle.java:28)
+	at tests.TC05_ValidateBottomLinks.ValidateBottomLinks(TC05_ValidateBottomLinks.java:38)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
@@ -160,7 +159,7 @@
   &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;ChromeTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.TC04_ValidateTitle&quot;/&gt;
+      &lt;class name=&quot;tests.TC05_ValidateBottomLinks&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ChromeTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -202,9 +201,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validatetitle')
-data.setCell(0, 2, 'tests.TC04_ValidateTitle')
-data.setCell(0, 3, 25189);
+data.setCell(0, 1, 'ValidateBottomLinks')
+data.setCell(0, 2, 'tests.TC05_ValidateBottomLinks')
+data.setCell(0, 3, 25818);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -235,7 +234,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.TC04_ValidateTitle</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.TC05_ValidateBottomLinks</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchBrowser(Chrome)</span>
                 <span class="method-start">0 ms</span>
@@ -243,12 +242,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">validatetitle</span>
-                <span class="method-start">4525 ms</span>
+                <span class="method-name">ValidateBottomLinks</span>
+                <span class="method-start">4227 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">30287 ms</span>
+                <span class="method-start">30340 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

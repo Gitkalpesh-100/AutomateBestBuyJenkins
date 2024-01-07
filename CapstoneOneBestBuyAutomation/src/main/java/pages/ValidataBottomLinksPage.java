@@ -42,6 +42,10 @@ public class ValidataBottomLinksPage extends ProjectSpecifications{
 	@FindBy (xpath = "//a[contains(@class, 'body-copy-sm mr-200') and contains(text(), 'CA Supply Chain Transparency Act')]")
 	WebElement CASupplyChainTransparencyAct;
 	
+
+	@FindBy(xpath = "//a[contains(@class, 'mini-header__nav')]")
+	WebElement returntopreviouspage;
+	
 	
 	public ValidataBottomLinksPage() {
 		PageFactory.initElements(driver, this);
@@ -53,15 +57,18 @@ public class ValidataBottomLinksPage extends ProjectSpecifications{
 		validateTitle(Title1);
 	}
 	
-	public void clickTermsandConditons(String Title3) {
+	public void clickTermsandConditons(String Title2) {
 		click(TermsandConditions);
+		validateTitle(Title2);
+	}
+	
+	public void clickPrivacy(String Title3) {
+		click(Privacy);
 		validateTitle(Title3);
 	}
 	
-	public void clickPrivacy(String Title5) {
-		click(Privacy);
-		validateTitle(Title5);
-	}
+	
+	
 	
 	public void clickInterestBasedAds(String Title7) {
 		click(InterestBasedAds);
@@ -98,4 +105,7 @@ public class ValidataBottomLinksPage extends ProjectSpecifications{
 		validateTitle(Title19);
 	}	
 
+	public void clickReturntopreviouspage() {
+		click(returntopreviouspage);
+	}
 }

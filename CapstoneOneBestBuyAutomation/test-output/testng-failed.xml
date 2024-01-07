@@ -7,13 +7,13 @@
   <test thread-count="3" parallel="tests" name="ChromeTest(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="tests.TC04_ValidateTitle">
+      <class name="tests.TC05_ValidateBottomLinks">
         <methods>
-          <include name="validatetitle"/>
           <include name="launchBrowser"/>
           <include name="closeBrowser"/>
+          <include name="ValidateBottomLinks"/>
         </methods>
-      </class> <!-- tests.TC04_ValidateTitle -->
+      </class> <!-- tests.TC05_ValidateBottomLinks -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

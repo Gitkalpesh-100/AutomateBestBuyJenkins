@@ -120,7 +120,7 @@ public class UtilClass {
 			Assert.assertEquals(my_title, expected_title);
 
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 		}
 
 	}

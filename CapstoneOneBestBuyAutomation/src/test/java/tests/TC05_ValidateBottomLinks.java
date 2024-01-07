@@ -16,254 +16,49 @@ import pages.ValidateTitlePage;
 import utils.UtilClass;
 
 public class TC05_ValidateBottomLinks extends ProjectSpecifications {
+	@Test
+	public void ValidateBottomLinks() {
+	HomePage home = new HomePage();
+	home.chooseCountry();
+	
+	home.scroll();
+	ValidataBottomLinksPage vbl = new ValidataBottomLinksPage();
+	
+	//home.scroll();
+	//vbl.clickaccessibility("Accessibility - Best Buy");
 	
 	
-	
-	vbl.Accessibility();
-	try 
-	{
-		CaptureScreen("Accessbility1");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	
-	vbl.validateTitle("Accessibility - Best Buy");
-	try 
-	{
-		CaptureScreen("Accessbility2");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
 
 	home.scroll();
-	
-	
-	vbl.TermsandConditons();
-	try 
-	{
-		CaptureScreen("TermsAndConditions1");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	
+	vbl.clickTermsandConditons("BestBuy.com Terms and Conditions");
 	vbl.validateTitle("BestBuy.com Terms and Conditions");
-	try 
-	{
-		CaptureScreen("TermsAndConditions2");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-
+	
+	
 	home.scroll();
-	
-	
-	vbl.Privacy();
-	try 
-	{
-		CaptureScreen("PrivacyPolicy1");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	
 	vbl.validateTitle("Privacy Policy Hub - Best Buy");
-	try 
-	{
-		CaptureScreen("PrivacyPolicy2");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-
 	
 	home.scroll();
-	
-	vbl.InterestBasedAds();
-	try 
-	{
-		CaptureScreen("Interest-BasedAds1");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	
 	vbl.validateTitle("Interest-Based Ads - Best Buy");
-	try 
-	{
-		CaptureScreen("Interest-BasedAds2");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-
+	
 	
 	home.scroll();
+    vbl.validateTitle("State Privacy Rights - Best Buy");
 	
-	
-	vbl.StatePrivacyRights();
-	try 
-	{
-		CaptureScreen("StatePrivcyRights1");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	
-	vbl.validateTitle("State Privacy Rights - Best Buy");
-	try 
-	{
-		CaptureScreen("StatePrivacyRights2");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
 
 	home.scroll();
+    //vbl.validateTitle("Privacy Policy Hub - Best Buy");
 	
-	vbl.HealthDataPrivacy();
-	try 
-	{
-		CaptureScreen("HealthDataPrivacy1");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	
-	//vbl.validateTitle("Privacy Policy Hub - Best Buy");
-	try 
-	{
-		CaptureScreen("HealthDataPrivacy2");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-
 	
 	home.scroll();
-	vbl.DoNotSellOrShareMyPersonalInformation();
-	try 
-	{
-		CaptureScreen("MyPersonalInfo1");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	
 	vbl.validateTitle("Start Request - Best Buy");
-	try 
-	{
-		CaptureScreen("MyPersonalInfo2");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	
-	vt.clickReturntopreviouspage();
-	home.scroll();
-
-	vbl.LimitUseOfMySensitivePersonalInformation();
-	try 
-	{
-		CaptureScreen("SensitiveInfo1");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	
-	home.validateTitle("Best Buy");
-	try 
-	{
-		CaptureScreen("SensitiveInfo2");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
 	
 
-	home.validateTitle("Best Buy");
-	vt.clickReturntopreviouspage();
-
-	home.scroll();
-	
-	vbl.TargetedAdvertisingOptOut();
-	try 
-	{
-		CaptureScreen("TargetedAdvertising1");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	
 	home.validateTitle("Start Request - Best Buy");
-	try 
-	{
-		CaptureScreen("TargetedAdvertising2");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	vt.clickReturntopreviouspage();
-
 	home.scroll();
-	
-	vbl.CASupplyChainTransparencyAct();
-	try 
-	{
-		CaptureScreen("TransparencyAct1");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
-	}
-	
-	
 	home.validateTitle("California Supply Chain Transparency Act - Best Buy");
-	try 
-	{
-		CaptureScreen("TransperancyAct2");
-	} 
-	catch (IOException e) 
-	{
-	    e.printStackTrace();
+	
 	}
-	
 
-	
-	
-	
 }
 	
 	
@@ -432,4 +227,4 @@ for (WebElement menuItem : menuLink) {
 
 	menuItem.click();
 */
-	*/
+	

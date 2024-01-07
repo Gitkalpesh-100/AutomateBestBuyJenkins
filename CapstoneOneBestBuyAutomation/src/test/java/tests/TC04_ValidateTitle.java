@@ -25,69 +25,27 @@ public class TC04_ValidateTitle extends ProjectSpecifications {
 
 		vt.clickTopDeals("Top Deals and Featured Offers on Electronics - Best Buy");
 		vt.clickDealOftheDay("Deal of the Day: Electronics Deals - Best Buy");
-		vt.clickyesBestBuySellsThat("Yes, Best Buy Sells That - Best Buy");
-		vt.clickMyBestBuyMemberships("");
+		//vt.clickyesBestBuySellsThat("Yes, Best Buy Sells That - Best Buy");
+		vt.clickMyBestBuyMemberships("My Best Buy Memberships");
 		vt.clickMore();
-		vt.clickGiftCards("");
+		vt.clickGiftCards("Gifts Cards and E-Gift Cards - Best Buy");
 		vt.clickMore();
-		vt.clickGiftIdeas("");
+		vt.clickGiftIdeas("Gift Ideas 2024: Best Gifts to Give This Year - Best Buy");
 		vt.clickMore();
-		vt.clickDonatetoStJude("");
+		vt.clickDonatetoStJude("St.Jude Children's Research Hospital - Best Buy");
 		vt.clickClose();
 		vt.clickAccount1();
-		vt.clickCreateAccount1("");
+		vt.clickCreateAccount1("Best Buy: Create an Account");
 		vt.clickReturntopreviouspage();
 		vt.clickAccount1();
-		vt.clickSignIn1("");
+		vt.clickSignIn1("Sign In to Best Buy");
 		vt.clickReturntopreviouspage();
-		vt.clickRecentlyViewed("");
+		vt.clickRecentlyViewed("Recently Viewed Best Buy");
 		vt.clickManageAllYourRecentlyViewedItems();
-		vt.clickOrderStatus("");
+		vt.clickOrderStatus("Sign In for Order Status");
 		vt.clickContinueButton();
 		vt.clickReturntopreviouspage();     
-		vt.clickSavedItems("");
+		vt.clickSavedItems("Saved Items - Best Buy");
 		vt.clickSeeAllYourSavedItems();
 }
 }
-
-
-
-
-/*
- * @BeforeTest() public void setup() { sheetName = "ValidateTitleTest1"; }
- * 
- * @Test(dataProvider = "getInputData") public void ValidateTitle(String Title1,
- * String Title2, String Title3, String Title4, String Title5, String Title6,
- * String Title7, String Title8, String Title9, String Title10, String Title11,
- * String Title12, String Title13, String Title14, String Title15, String
- * Title16, String Title17, String Title18, String Title19, String Title20,
- * String Title21, String Title22, String Title23, String Title24, String
- * Title25, String Title26, String Title27) {
- * 
- * HomePage home = new HomePage(); home.chooseCountry();
- * 
- * ValidateTitlePage vt = new ValidateTitlePage(); //
- * vt.clickHolidayDeals(Title1); // vt.clickHolidayDeals(Title2);
- * 
- * vt.clickTopDeals(Title7); vt.clickTopDeals(Title8);
- * vt.clickDealOftheDay(Title9); vt.clickDealOftheDay(Title10);
- * vt.clickyesBestBuySellsThat(Title11); vt.clickyesBestBuySellsThat(Title12);
- * vt.clickMyBestBuyMemberships(Title13); vt.clickMyBestBuyMemberships(Title14);
- * vt.clickAccount1(); vt.clickCreateAccount1(Title19);
- * vt.clickReturntopreviouspage(Title27); vt.clickAccount1();
- * vt.clickCreateAccount1(Title20); vt.clickReturntopreviouspage(Title27);
- * vt.clickAccount1(); vt.clickSignIn1(Title17);
- * vt.clickReturntopreviouspage(Title27); vt.clickAccount1();
- * vt.clickSignIn1(Title18); vt.clickReturntopreviouspage(Title27);
- * 
- * 
- * vt.clickRecentlyViewed(Title21); vt.clickRecentlyViewed(Title22);
- * vt.clickOrderStatus(Title23); vt.clickOrderStatus(Title24);
- * vt.clickSavedItems(Title25); vt.clickSavedItems(Title26);
- * 
- * vt.clickMore(); vt.clickgiftCards(Title3); vt.clickMore();
- * vt.clickgiftCards(Title4); vt.clickMore(); vt.clickGiftIdeas(Title5);
- * vt.clickMore(); vt.clickGiftIdeas(Title6); vt.clickMore();
- * vt.clickDonatetoStJude(Title15); vt.clickMore();
- * vt.clickDonatetoStJude(Title16); vt.clickClose(); }
- */
